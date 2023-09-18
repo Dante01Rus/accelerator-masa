@@ -1,0 +1,227 @@
+.faq {
+  background-color: $color-secondary-alabaster;
+}
+
+.faq .container {
+  padding-top: 63px;
+  padding-bottom: 60px;
+
+  @include vp-1199 {
+    padding-top: 39px;
+    padding-bottom: 40px;
+  }
+
+  @include vp-767 {
+    padding-top: 9px;
+    padding-bottom: 20px;
+  }
+}
+
+.faq h2 {
+  @include title-h2;
+
+  margin: 0 0 67px;
+  text-align: center;
+  color: $color-secondary-cerulean;
+
+  @include vp-1199 {
+    margin-bottom: 41px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 33px;
+  }
+}
+
+.faq__accordion {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 1028px;
+
+  @include vp-1199 {
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.faq__accordion-element {
+  width: 100%;
+  height: 100%;
+  color: $color-secondary-cerulean;
+  background-color: $color-secondary-alabaster;
+  border: 1px solid $color-secondary-cerulean;
+  border-radius: 16px;
+  transition: all $trans-default;
+
+  @include vp-767 {
+    border-radius: 14px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-default-white;
+
+    .faq__accordion-button::after {
+      border: 1px solid $color-secondary-cerulean;
+      background: $color-default-white url("../img/sprite.svg#plus-hover") no-repeat center / 20px 20px;
+      stroke: $color-secondary-cerulean;
+    }
+  }
+
+  &:active {
+    .faq__accordion-button {
+      color: $color-btn-active;
+    }
+
+    .faq__accordion-button::after {
+      background: $color-btn-active url("../img/sprite.svg#plus") no-repeat center / 20px 20px;
+    }
+  }
+}
+
+.faq__accordion-element.is-active {
+  padding-bottom: 32px;
+  color: $color-default-white;
+  background-color: $color-secondary-cerulean;
+
+  @include vp-1199 {
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 14px;
+  }
+}
+
+.faq__accordion-button {
+  position: relative;
+  padding: 42px 40px;
+  width: 100%;
+  text-align: start;
+  color: $color-secondary-cerulean;
+  background-color: inherit;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background $trans-default;
+
+  @include vp-1199 {
+    padding: 36px 29px;
+  }
+
+  @include vp-767 {
+    padding: 21px 14px;
+    border-radius: 14px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 39px;
+    right: 39px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: $color-secondary-cerulean url("../img/sprite.svg#plus") no-repeat center / 20px 20px;
+    transition: all $trans-default;
+
+    @include vp-1199 {
+      top: 29px;
+      right: 29px;
+    }
+
+    @include vp-767 {
+      top: 50%;
+      right: 14px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.faq__accordion-element.is-active .faq__accordion-button {
+  padding-bottom: 0;
+  color: $color-default-white;
+  background-color: $color-secondary-cerulean;
+
+  @include vp-1199 {
+    padding-bottom: 7px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 21px;
+  }
+}
+
+.faq__accordion-button p {
+  @include title-h4;
+
+  margin: 0;
+  max-width: 750px;
+
+  @include vp-1199 {
+    max-width: 500px;
+  }
+
+  @include vp-767 {
+    max-width: 75%;
+  }
+}
+
+.faq__accordion-element.is-active {
+  & .faq__accordion-button::after {
+    background-color: $color-default-white;
+    background-image: url("../img/sprite.svg#minus");
+  }
+
+  &:hover,
+  &:focus-visible {
+    .faq__accordion-button::after {
+      border: 1px solid $color-default-white;
+      background: $color-secondary-cerulean url("../img/sprite.svg#minus-hover") no-repeat center / 20px 20px;
+    }
+  }
+
+  &:active {
+    background-color: $color-btn-active;
+
+    .faq__accordion-button {
+      background-color: $color-btn-active;
+    }
+
+    .faq__accordion-button::after {
+      background: $color-default-white url("../img/sprite.svg#minus") no-repeat center / 20px 20px;
+
+    }
+  }
+}
+
+.faq__accordion-content {
+  @include text-regular;
+
+  margin-left: 40px;
+  width: 637px;
+
+  @include vp-1199 {
+    margin-left: 29px;
+    width: 580px;
+  }
+
+  @include vp-767 {
+    margin-left: 14px;
+    width: calc(100% - 28px);
+  }
+}
+
+.faq__accordion-wrapper p {
+  margin-bottom: 0;
+
+  @include vp-767 {
+    margin-top: -4px;
+  }
+}

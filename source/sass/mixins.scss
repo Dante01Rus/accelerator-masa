@@ -1,5 +1,7 @@
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     @content;
   }
 }
@@ -38,26 +40,8 @@
 
 // Desktop first
 
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }
@@ -68,51 +52,229 @@
   }
 }
 
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
-    @content;
+// Titles
+
+@mixin title-h1 {
+  font-size: 54px;
+  line-height: 62px;
+  font-weight: 400;
+
+  @include vp-1199 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 
-// Mobile first
+@mixin title-h2 {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 400;
 
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 50px;
+  }
 
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
+@mixin title-h3 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
 
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 28px;
+  }
 
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
+@mixin title-h4 {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 400;
 
-// ---------------------------------
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+  }
 
-// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
-// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@mixin title-h5 {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0.26px;
+  text-transform: uppercase;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@mixin title-h6 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+// text
+
+@mixin text-big {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@mixin text-medium {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+
+  @include vp-1199 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@mixin text-regular {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+
+  @include vp-1199 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin text-small {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin text-xsmall {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@mixin text-xxsmall {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+// Caption
+
+@mixin caption {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+}
+
+// Button
+
+@mixin btn {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+// angle
+
+@mixin angle {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: -20px;
+    bottom: 0;
+
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../img/sprite.svg#angle");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

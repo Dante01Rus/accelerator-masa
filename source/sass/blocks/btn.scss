@@ -1,26 +1,41 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  @include btn;
 
-  color: $color-default-white;
+  padding: 3px 3px 3px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
 
-  background-color: $color-neon-blue;
-  border: none;
+  color: $color-secondary-cerulean;
+
+  background-color: $color-default-white;
+  border: 1px solid $color-secondary-cerulean;
   cursor: pointer;
 
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
+  transition: all $trans-default;
 
   &:disabled {
-    opacity: 0.5;
-
+    color: $color-btn-disabled;
+    border: 1px solid $color-btn-disabled;
     pointer-events: none;
-  }
 
-  @include hover-focus {
-    opacity: 0.8;
+    .btn-wrapper {
+      background-color: $color-btn-disabled;
+    }
   }
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: $color-secondary-cerulean;
+}
+
+.btn-wrapper svg {
+  stroke: $color-default-white;
 }

@@ -1,0 +1,269 @@
+.hero__swiper,
+.hero__swiper-wrapper {
+  width: 100vw;
+  min-height: 55vw;
+
+  @include vp-1199 {
+    min-height: 133vw;
+  }
+}
+
+.hero__swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: auto;
+
+  @include vp-767 {
+    min-height: 568px;
+  }
+}
+
+.hero__overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-photo-overlay;
+  z-index: 1;
+}
+
+.hero__swiper-slide img,
+.hero__swiper-slide picture {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.hero__slider-content {
+  position: relative;
+  padding: 409px 100px 60px;
+  z-index: 2;
+
+  @include vp-1199 {
+    padding: 676px 45px 60px;
+  }
+
+  @include vp-767 {
+    padding: calc(73%) 15px 20px;
+  }
+}
+
+.hero__swiper-pagination {
+  position: relative;
+  top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 94px;
+  height: 38px;
+  background-color: $color-default-white;
+  border-radius: 20px 20px 0 0;
+
+  @include vp-767 {
+    width: 80px;
+    height: 28px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  @include angle;
+
+  &::after {
+    right: -19px;
+  }
+}
+
+.hero__swiper-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $color-secondary-cerulean;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+
+  &--active {
+    background-color: $color-secondary-cerulean;
+  }
+}
+
+.hero__slider-content h2 {
+  @include title-h1;
+
+  margin: 0;
+  padding: 40px 50px 30px;
+  width: 968px;
+  color: $color-secondary-cerulean;
+  background-color: $color-default-white;
+  border-radius: 0 30px 30px 0;
+
+  @include vp-1199 {
+    padding: 30px 40px 24px;
+    width: 659px;
+  }
+
+  @include vp-767 {
+    padding: 20px 14px 16px;
+    width: 100%;
+    max-width: 364px;
+    border-radius: 0 16px 16px 0;
+  }
+}
+
+.hero__slider-info {
+  @include angle;
+
+  margin-top: -7px;
+  padding: 0 50px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 772px;
+  background-color: $color-default-white;
+  border-radius: 0 0 30px 30px;
+
+  @include vp-1199 {
+    margin-top: -4px;
+    padding: 0 40px 32px;
+    width: 591px;
+  }
+
+  @include vp-767 {
+    margin-top: -5px;
+    padding: 0;
+    display: flex;
+    width: 261px;
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  &::after {
+    top: 6px;
+    right: -25px;
+    width: 26px;
+    height: 26px;
+    transform: rotate(90deg);
+
+    @include vp-1199 {
+      top: 4px;
+    }
+
+    @include vp-767 {
+      width: 10px;
+      height: 10px;
+      right: -10px;
+    }
+  }
+}
+
+.hero__slider-info p {
+  @include text-regular;
+
+  margin: 0;
+  width: 446px;
+
+  @include vp-1199 {
+    width: 285px;
+  }
+
+  @include vp-767 {
+    padding: 0 14px 10px;
+    width: 261px;
+    background-color: $color-default-white;
+    border-radius: 0 0 16px 0;
+  }
+}
+
+.hero__slider-btn-wrapper {
+  @include vp-767 {
+    margin-top: -1px;
+    padding: 10px 15px;
+    background-color: $color-default-white;
+    border-radius: 0 0 14px 14px;
+
+    @include angle;
+
+    &::after {
+      top: 0;
+      right: -10px;
+      width: 10px;
+      height: 10px;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.hero__slider-btn {
+  margin-top: 12px;
+  padding-left: 30px;
+  gap: 30px;
+
+  @include vp-1199 {
+    margin-top: 4px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    padding-left: 19px;
+    gap: 20px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-default-white;
+    background-color: $color-secondary-cerulean;
+
+    .hero__icon-wrapper {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      stroke: $color-secondary-cerulean;
+      transform: rotate(45deg);
+      transition: transform $trans-default;
+    }
+  }
+
+  &:active {
+    .hero__slider-btn-text,
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &.disabled {
+    color: $color-btn-disabled;
+    border: 1px solid $color-btn-disabled;
+    pointer-events: none;
+
+    .hero__icon-wrapper {
+      background-color: $color-btn-disabled;
+    }
+  }
+}
+
+.hero__icon-wrapper {
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.hero__slider-btn svg {
+  stroke: $color-default-white;
+}

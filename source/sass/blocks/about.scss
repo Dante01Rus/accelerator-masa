@@ -1,0 +1,314 @@
+.about {
+  background-color: $color-secondary-alabaster;
+}
+
+.about .container {
+  padding-top: 118px;
+  padding-bottom: 60px;
+
+  @include vp-1199 {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+    padding-bottom: 40px;
+  }
+}
+
+.about__intro {
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 477px 498px;
+  grid-auto-flow: dense;
+  column-gap: calc(13% - 2px);
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+    width: 498px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+
+.about__intro h2 {
+  @include title-h2;
+
+  margin: 5px 0 29px;
+  grid-column: 1/2;
+  color: $color-secondary-cerulean;
+
+  @include vp-1199 {
+    margin-bottom: 24px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
+}
+
+.about__intro h2+p {
+  @include text-big;
+
+  margin: 0;
+  grid-column: 1/2;
+
+  @include vp-1199 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    width: 243px;
+  }
+}
+
+.about__intro h3 {
+  @include title-h3;
+
+  margin: 0 0 40px;
+  grid-column: 2/3;
+  color: $color-secondary-cerulean;
+
+  @include vp-1199 {
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
+}
+
+.about__intro h3 + p {
+  @include text-regular;
+
+  margin: -15px 0 33px;
+  grid-column: 2/3;
+
+  @include vp-1199 {
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 26px;
+  }
+}
+
+.about__link {
+  padding-left: 30px;
+  grid-column: 2/3;
+  width: 277px;
+  background-color: $color-secondary-alabaster;
+  cursor: pointer;
+
+  @include vp-767 {
+    padding-left: 20px;
+    width: 221px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-default-white;
+    background-color: $color-secondary-cerulean;
+
+    .about__icon-wrapper {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      stroke: $color-secondary-cerulean;
+      transform: rotate(45deg);
+      transition: transform $trans-default;
+    }
+  }
+
+  &:active {
+    .about__link-text,
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &.disabled {
+    color: $color-btn-disabled;
+    border: 1px solid $color-btn-disabled;
+    pointer-events: none;
+
+    .about__icon-wrapper {
+      background-color: $color-btn-disabled;
+    }
+  }
+}
+
+.about__icon-wrapper {
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.about__features {
+  padding: 70px calc((100% - 1028px) / 2) 36px;
+  background-color: $color-secondary-cerulean;
+  border-radius: 20px;
+
+  @media (max-width: 1250px) {
+    padding: 70px 15px 34px;
+  }
+
+  @include vp-1199 {
+    padding: 42px 40px 19px;
+  }
+
+  @include vp-767 {
+    padding: 20px 0 40px;
+  }
+}
+
+.about__list {
+  margin: 0;
+  padding: 20px 0 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  list-style-type: none;
+  row-gap: 52px;
+
+  @media (max-width: 1300px) {
+    justify-content: space-around;
+  }
+
+  @include vp-1199 {
+    margin: 0 auto;
+    padding: 20px 0 20px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    width: 598px;
+    gap: 41px 50px;
+  }
+
+  @include vp-767 {
+    padding: 21px 20px 0 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+  }
+}
+
+.about__item {
+  position: relative;
+  padding: 30px 60px;
+  display: flex;
+  max-width: 478px;
+  color: $color-default-white;
+  border: 1px solid $color-secondary-alabaster;
+  border-radius: 16px;
+  z-index: 1;
+
+  &--cost {
+    padding-right: 47px;
+  }
+
+  &--countries {
+    padding-right: 50px;
+  }
+
+  @media (max-width: 1300px) {
+    padding: 30px 40px;
+  }
+
+  @include vp-1199 {
+    padding: 28px 30px 26px;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px 24px 20px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -22px;
+    left: -21px;
+    width: 42px;
+    height: 42px;
+    background: $color-secondary-cerulean url("../img/sprite.svg#star") no-repeat center / 22px 22px;
+    z-index: 3;
+
+    @include vp-767 {
+      top: -20px;
+      width: 40px;
+      height: 40px;
+      background-size: 18px 18px
+    }
+  }
+}
+
+.about__item p {
+  @include text-small;
+
+  margin: 0;
+}
+
+.about__item--programms h5 {
+  margin: 0;
+  margin-right: 36px;
+  width: 144px;
+}
+
+.about__item--programms p {
+  width: 178px;
+}
+
+.about__item--members h5 {
+  margin: 0;
+  margin-right: 20px;
+  width: 171px;
+}
+
+.about__item--members p {
+  width: 167px;
+}
+
+.about__item--cost h5 {
+  margin: 0;
+  margin-right: 46px;
+  width: 134px;
+}
+
+.about__item--cost p {
+  width: 190px;
+}
+
+.about__item--countries h5 br {
+  display: none;
+}
+
+.about__item--countries h5 {
+  margin: 0;
+  margin-right: 30px;
+  width: 163px;
+}
+
+.about__item--countries p {
+  width: 166px;
+}
+
+.about__item h5 {
+  @include title-h5;
+
+  @include vp-1199 {
+    margin: 0 0 9px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 4px;
+    width: 100%;
+    letter-spacing: 0.16px;
+  }
+}

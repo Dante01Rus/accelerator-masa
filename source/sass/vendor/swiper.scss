@@ -280,9 +280,6 @@
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 10px;
-  left: 0;
-  width: 100%;
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {
@@ -420,7 +417,7 @@ button.swiper-pagination-bullet {
   border-radius: 10px;
   position: relative;
   -ms-touch-action: none;
-  background: rgba(0, 0, 0, 0.1);
+  // background: rgba(0, 0, 0, 0.1);
 }
 .swiper-scrollbar-disabled > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-disabled {
@@ -428,12 +425,12 @@ button.swiper-pagination-bullet {
 }
 .swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
-  position: absolute;
-  left: 1%;
-  bottom: 3px;
-  z-index: 50;
-  height: 5px;
-  width: 98%;
+  // position: absolute;
+  // left: 1%;
+  // bottom: 3px;
+  // z-index: 50;
+  height: 2px;
+  // width: 98%;
 }
 .swiper-vertical > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-vertical {
@@ -448,10 +445,11 @@ button.swiper-pagination-bullet {
   height: 100%;
   width: 100%;
   position: relative;
-  background: rgba(0, 0, 0, 0.5);
+  background: #316dc2;
   border-radius: 10px;
   left: 0;
   top: 0;
+  cursor: pointer;
 }
 .swiper-scrollbar-cursor-drag {
   cursor: move;

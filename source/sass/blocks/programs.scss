@@ -1,0 +1,372 @@
+.programs {
+  background-color: $color-secondary-alabaster;
+}
+
+.programs .container {
+  padding-top: 60px;
+  padding-bottom: 120px;
+
+  @include vp-1199 {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    overflow: hidden;
+  }
+
+  @include vp-767 {
+    position: relative;
+    padding-top: 27px;
+    padding-bottom: 79px;
+  }
+}
+
+.programs__header {
+  margin-bottom: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include vp-1199 {
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 33px;
+  }
+}
+
+.programs__header h2 {
+  @include title-h2;
+
+  margin: 4px 0 0;
+  max-width: 565px;
+  color: $color-secondary-cerulean;
+
+  @include vp-1199 {
+    margin-top: 1px;
+  }
+}
+
+.programs__link {
+  padding-left: 30px;
+  width: 233px;
+  gap: 30px;
+  background-color: $color-secondary-alabaster;
+
+  @include vp-767 {
+    position: absolute;
+    left: 15px;
+    bottom: 67px;
+    width: 203px;
+    gap: 28px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-default-white;
+    background-color: $color-secondary-cerulean;
+
+    .programs__icon-wrapper {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      stroke: $color-secondary-cerulean;
+      transform: rotate(45deg);
+      transition: transform $trans-default;
+    }
+  }
+
+  &:active {
+    .programs__link-text,
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &.disabled {
+    color: $color-btn-disabled;
+    border: 1px solid $color-btn-disabled;
+    pointer-events: none;
+
+    .programs__icon-wrapper {
+      background-color: $color-btn-disabled;
+    }
+  }
+}
+
+.programs__link .programs__icon-wrapper {
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.programs__swiper {
+  margin-bottom: 40px;
+  min-height: 420px;
+
+  @include vp-1199 {
+    overflow: visible;
+  }
+
+  @include vp-767 {
+    overflow: hidden;
+  }
+}
+
+.programs__swiper-wrapper {
+  min-height: 420px;
+}
+
+.programs__swiper-slide {
+  padding: 280px 51px 20px 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 3%;
+  overflow: hidden;
+
+  @include vp-1199 {
+    padding: 280px 41px 20px 20px;
+    max-width: 392px;
+    min-height: 420px;
+    border-radius: 3%;
+    overflow: hidden;
+  }
+
+  @include vp-767 {
+    padding: 271px 10px 18px;
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    height: 125vw;
+  }
+}
+
+.programs__overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.programs__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-photo-overlay;
+  border-radius: 3%;
+  z-index: 1;
+}
+
+.programs__swiper-slide img,
+.programs__swiper-slide picture {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+
+  @include vp-1199 {
+    border-radius: 3%;
+  }
+}
+
+.programs__slider-content {
+  position: relative;
+  z-index: 2;
+
+  @include vp-1199 {
+  }
+
+  @include vp-767 {
+  }
+}
+
+.programs__slider-content h3 {
+  @include title-h6;
+  @include angle;
+
+  margin: 0;
+  padding: 13px 36px 6px 18px;
+  width: 194px;
+  border-radius: 12px 12px 0 0;
+  color: $color-secondary-cerulean;
+  background-color: $color-default-white;
+
+  &::after {
+    width: 18px;
+    height: 18px;
+    bottom: 3px;
+    right: -17px;
+
+    @include vp-1199 {
+      bottom: 4px;
+      right: -18px;
+    }
+  }
+
+  @include vp-1199 {
+    padding: 12px 36px 6px 18px;
+    width: 173px;
+  }
+
+  @include vp-767 {
+    padding: 18px 36px 10px 18px;
+    width: 146px;
+  }
+}
+
+.programs__slider-info {
+  margin-top: -4px;
+  padding: 10px 18px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 79px;
+  border-radius: 0 12px 12px 12px;
+  background-color: $color-default-white;
+
+  @include vp-1199 {
+    margin-top: -5px;
+    padding: 6px 18px 9px;
+    min-height: 77px;
+  }
+
+  @include vp-767 {
+    padding: 12px 18px 15px;
+    min-height: 69px;
+  }
+}
+
+.programs__slider-info p {
+  @include text-xsmall;
+
+  margin: 0;
+  width: 239px;
+
+  @include vp-1199 {
+    width: 181px;
+  }
+
+  @include vp-767 {
+    width: calc(100% - 62px);
+  }
+}
+
+.programs__slider-btn {
+  padding: 0;
+  border: none;
+
+  @include vp-1199 {
+    margin-bottom: 2px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-default-white;
+    background-color: $color-secondary-cerulean;
+
+    .programs__icon-wrapper {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      stroke: $color-secondary-cerulean;
+      transform: rotate(45deg);
+      transition: transform $trans-default;
+    }
+  }
+
+  &:active svg {
+    opacity: 0.7;
+  }
+
+  &.disabled {
+    color: $color-btn-disabled;
+    border: 1px solid $color-btn-disabled;
+    pointer-events: none;
+
+    .programs__icon-wrapper {
+      background-color: $color-btn-disabled;
+    }
+  }
+}
+
+.programs__slider-btn .programs__icon-wrapper {
+  width: 30px;
+  height: 30px;
+}
+
+.programs__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.programs__swiper-scrollbar {
+  position: relative;
+  width: calc(100% - 106px);
+  background-color: $color-photo-overlay;
+
+  @include vp-1199 {
+    width: calc(100% - 118px);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.programs__controls-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 54px;
+  height: 22px;
+
+  @include vp-767 {
+    position: absolute;
+    top: 27px;
+    right: 14px;
+  }
+}
+
+.programs__swiper-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  stroke: $color-secondary-cerulean;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-default-white;
+  }
+
+  &:active svg {
+    opacity: 0.7;
+  }
+
+  &--disabled {
+    stroke: $color-btn-disabled;
+    pointer-events: none;
+  }
+}
+
+.programs__swiper-button--prev svg {
+  transform: rotate(-135deg);
+}
+
+.programs__swiper-button--next svg {
+  transform: rotate(45deg);
+}
