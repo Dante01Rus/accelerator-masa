@@ -919,7 +919,7 @@
               </div>
             </div>
 
-            <div class="faq__accordion-element is-active" data-accordion="element">
+            <div class="faq__accordion-element" data-accordion="element">
               <button class="faq__accordion-button" type="button" data-accordion="button">
                 <span>Как определяется стоимость программы?</span>
               </button>
@@ -1147,7 +1147,7 @@
               </div>
               <div class="feedback__checkbox" data-validate-type="checkbox">
                 <label>
-                  <input type="checkbox" checked value="agree" name="processing of personal data">
+                  <input type="checkbox" value="agree" name="processing of personal data">
                   <span class="feedback__checkbox-mark"></span>
                   <span class="feedback__checkbox-text">Я согласен на обработку моих персональных данных</span>
                 </label>
@@ -1178,17 +1178,8 @@
           </div>
         </div>
       </section>
-      <!-- <section class="intro">
-        <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-        </div>
-      </section> -->
     </main>
+
     <footer class="footer">
       <div class="container">
         <a href="index.html" class="footer__logo-link">
@@ -1256,7 +1247,7 @@
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
         <h3>Напишите нам</h3>
-        <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы – мы на&nbsp;них ответим!</p>
+        <p>Оставьте ваши контакты, если&nbsp;у&nbsp;вас остались вопросы&nbsp;– мы на&nbsp;них ответим!</p>
         <div class="modal__form form" data-form-validate data-callback="base">
           <form action="https://echo.htmlacademy.ru" method="post">
             <div class="modal__name" data-validate-type="text" data-limitation="name" data-required>
@@ -1310,21 +1301,6 @@
       </div>
     </div>
   </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

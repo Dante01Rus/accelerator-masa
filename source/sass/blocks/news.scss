@@ -490,8 +490,8 @@
     font-weight: 500;
   }
 
-  &:hover,
-  &:focus-visible {
+  &:not(.news__swiper-pagination-btn--active):hover,
+  &:not(.news__swiper-pagination-btn--active):focus-visible {
     color: $color-secondary-cerulean;
     border: 1px solid $color-secondary-cerulean;
   }
