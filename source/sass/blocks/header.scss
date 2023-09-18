@@ -35,6 +35,20 @@
     outline: none;
   }
 
+  &:hover .header__menu-icon,
+  &:focus-visible .header__menu-icon {
+    background-color: $color-default-white;
+
+    &::after {
+      background: url("../img/sprite.svg#burger-hover") no-repeat center / 20px 20px;
+    }
+  }
+
+  &:active .header__menu-btn-text,
+  &:active .header__menu-icon::after {
+    opacity: 0.7;
+  }
+
   &--opened {
     width: 286px;
     color: $color-default-white;
@@ -52,38 +66,15 @@
       right: 15px;
       width: 290px;
     }
-  }
-}
-
-.header__menu-btn,
-.header__menu-btn {
-
-  &:hover .header__menu-icon,
-  &:focus-visible .header__menu-icon {
-    background-color: $color-default-white;
-
-    &::after {
-      background: url("../img/sprite.svg#burger-hover") no-repeat center / 20px 20px;
-    }
-
-  }
-
-  &--opened {
 
     &:hover .header__menu-icon,
     &:focus-visible .header__menu-icon {
-
       background-color: $color-secondary-cerulean;
 
       &::after {
         background: url("../img/sprite.svg#cross-hover") no-repeat center / 20px 20px;
       }
     }
-  }
-
-  &:active .header__menu-btn-text,
-  &:active .header__menu-icon::after {
-    opacity: 0.7;
   }
 }
 
@@ -154,8 +145,6 @@
   line-height: 16px;
   text-transform: uppercase;
 }
-
-.header__nav-item {}
 
 .header__nav-item svg {
   transform: rotate(0);

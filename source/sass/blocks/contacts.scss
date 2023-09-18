@@ -108,6 +108,29 @@
   padding: 4px 0;
   color: inherit;
   cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 1px;
+      width: 100%;
+      height: 1px;
+      background-color: $color-default-white;
+    }
+  }
+
+  &:active {
+    color: rgba($color-default-white, 0.8);
+
+    &::after {
+      background-color: rgba($color-default-white, 0.8);
+    }
+  }
 }
 
 .contacts__phone {

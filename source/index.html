@@ -897,7 +897,7 @@
           <div class="faq__accordion accordion" data-accordion="parent" data-single="">
             <div class="faq__accordion-element" data-accordion="element">
               <button class="faq__accordion-button" type="button" data-accordion="button">
-                <p>Кто организатор? Какие сроки у&nbsp;программы?</p>
+                <span>Кто организатор? Какие сроки у&nbsp;программы?</span>
               </button>
               <div class="faq__accordion-content" data-accordion="content">
                 <div class="faq__accordion-wrapper">
@@ -909,7 +909,7 @@
 
             <div class="faq__accordion-element" data-accordion="element">
               <button class="faq__accordion-button" type="button" data-accordion="button">
-                <p>Что такое грант на&nbsp;обучение?</p>
+                <span>Что такое грант на&nbsp;обучение?</span>
               </button>
               <div class="faq__accordion-content" data-accordion="content">
                 <div class="faq__accordion-wrapper">
@@ -921,7 +921,7 @@
 
             <div class="faq__accordion-element is-active" data-accordion="element">
               <button class="faq__accordion-button" type="button" data-accordion="button">
-                <p>Как определяется стоимость программы?</p>
+                <span>Как определяется стоимость программы?</span>
               </button>
               <div class="faq__accordion-content" data-accordion="content">
                 <div class="faq__accordion-wrapper">
@@ -934,7 +934,7 @@
 
             <div class="faq__accordion-element" data-accordion="element">
               <button class="faq__accordion-button" type="button" data-accordion="button">
-                <p>Признаётся ли&nbsp;учеба в&nbsp;рамках проекта для дальнейшего обучения?</p>
+                <span>Признаётся ли&nbsp;учеба в&nbsp;рамках проекта для дальнейшего обучения?</span>
               </button>
               <div class="faq__accordion-content" data-accordion="content">
                 <div class="faq__accordion-wrapper">
@@ -948,7 +948,7 @@
 
             <div class="faq__accordion-element" data-accordion="element">
               <button class="faq__accordion-button" type="button" data-accordion="button">
-                <p>Как выглядит полный процесс регистрации на&nbsp;программу «Маса»?</p>
+                <span>Как выглядит полный процесс регистрации на&nbsp;программу «Маса»?</span>
               </button>
               <div class="faq__accordion-content" data-accordion="content">
                 <div class="faq__accordion-wrapper">
@@ -1147,13 +1147,13 @@
               </div>
               <div class="feedback__checkbox" data-validate-type="checkbox">
                 <label>
-                  <input type="checkbox" value="agree" name="processing of personal data">
+                  <input type="checkbox" checked value="agree" name="processing of personal data">
                   <span class="feedback__checkbox-mark"></span>
                   <span class="feedback__checkbox-text">Я согласен на обработку моих персональных данных</span>
                 </label>
               </div>
               <button class="feedback__btn btn" type="submit">
-                <span>Отправить</span>
+                <span class="feedback__btn-text">Отправить</span>
                 <span class="feedback__icon-wrapper btn-wrapper">
                   <svg width="10" height="10">
                     <use href="./img/sprite.svg#arrow"></use>
@@ -1258,8 +1258,6 @@
         <h3>Напишите нам</h3>
         <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы – мы на&nbsp;них ответим!</p>
         <div class="modal__form form" data-form-validate data-callback="base">
-          <h2>Напишите нам</h2>
-          <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
           <form action="https://echo.htmlacademy.ru" method="post">
             <div class="modal__name" data-validate-type="text" data-limitation="name" data-required>
               <label>
@@ -1272,12 +1270,6 @@
               <label>
                 <span>Телефон</span>
                 <input type="text" name="phone" required autocomplete="off">
-              </label>
-            </div>
-            <div class="modal__text" data-validate-type="text" data-limitation="name" data-required>
-              <label>
-                <span>Ваше сообщение</span>
-                <textarea name="message" required></textarea>
               </label>
             </div>
             <div class="modal__select-wrapper custom-select" data-select="data-select" data-validate-type="select" data-required="true" data-name="city" data-id="city">
@@ -1301,7 +1293,7 @@
               </label>
             </div>
             <button class="modal__btn btn" type="submit">
-              <span>Отправить</span>
+              <span class="modal__btn-text">Отправить</span>
               <span class="modal__icon-wrapper btn-wrapper">
                 <svg width="10" height="10">
                   <use href="./img/sprite.svg#arrow"></use>
@@ -1310,7 +1302,7 @@
             </button>
           </form>
         </div>
-      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+      <button class="modal__close-btn btn-reset" type="submit" aria-label="Закрыть попап" data-close-modal>
           <svg width="15" height="15">
             <use href="./img/sprite.svg#cross"></use>
           </svg>

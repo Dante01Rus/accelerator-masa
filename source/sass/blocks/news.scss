@@ -202,10 +202,9 @@
 .news__slider-content > span {
   @include angle;
 
-  padding: 8px 14px 4px 0px;
+  padding: 8px 14px 4px 0;
   width: 78px;
   font-size: 12px;
-  font-style: normal;
   line-height: 12px;
   letter-spacing: 0.12px;
   text-transform: uppercase;

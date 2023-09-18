@@ -56,7 +56,7 @@
   background-color: $color-secondary-alabaster;
   border: 1px solid $color-secondary-cerulean;
   border-radius: 16px;
-  transition: all $trans-default;
+  transition: background $trans-default;
 
   @include vp-767 {
     border-radius: 14px;
@@ -81,20 +81,6 @@
     .faq__accordion-button::after {
       background: $color-btn-active url("../img/sprite.svg#plus") no-repeat center / 20px 20px;
     }
-  }
-}
-
-.faq__accordion-element.is-active {
-  padding-bottom: 32px;
-  color: $color-default-white;
-  background-color: $color-secondary-cerulean;
-
-  @include vp-1199 {
-    padding-bottom: 25px;
-  }
-
-  @include vp-767 {
-    padding-bottom: 14px;
   }
 }
 
@@ -129,7 +115,7 @@
     border: none;
     border-radius: 50%;
     background: $color-secondary-cerulean url("../img/sprite.svg#plus") no-repeat center / 20px 20px;
-    transition: all $trans-default;
+    transition: background $trans-default;
 
     @include vp-1199 {
       top: 29px;
@@ -142,38 +128,42 @@
       transform: translateY(-50%);
     }
   }
-}
 
-.faq__accordion-element.is-active .faq__accordion-button {
-  padding-bottom: 0;
-  color: $color-default-white;
-  background-color: $color-secondary-cerulean;
-
-  @include vp-1199 {
-    padding-bottom: 7px;
-  }
-
-  @include vp-767 {
-    padding-bottom: 21px;
-  }
-}
-
-.faq__accordion-button p {
-  @include title-h4;
-
-  margin: 0;
-  max-width: 750px;
-
-  @include vp-1199 {
-    max-width: 500px;
-  }
-
-  @include vp-767 {
-    max-width: 75%;
+  &:disabled {
+    &::after {
+      background-color: $color-btn-disabled;
+      pointer-events: none;
+    }
   }
 }
 
 .faq__accordion-element.is-active {
+  padding-bottom: 32px;
+  color: $color-default-white;
+  background-color: $color-secondary-cerulean;
+
+  @include vp-1199 {
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 14px;
+  }
+
+  & .faq__accordion-button {
+    padding-bottom: 0;
+    color: $color-default-white;
+    background-color: $color-secondary-cerulean;
+
+    @include vp-1199 {
+      padding-bottom: 7px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 21px;
+    }
+  }
+
   & .faq__accordion-button::after {
     background-color: $color-default-white;
     background-image: url("../img/sprite.svg#minus");
@@ -196,8 +186,22 @@
 
     .faq__accordion-button::after {
       background: $color-default-white url("../img/sprite.svg#minus") no-repeat center / 20px 20px;
-
     }
+  }
+}
+
+.faq__accordion-button span {
+  @include title-h4;
+
+  margin: 0;
+  max-width: 750px;
+
+  @include vp-1199 {
+    max-width: 500px;
+  }
+
+  @include vp-767 {
+    max-width: 75%;
   }
 }
 

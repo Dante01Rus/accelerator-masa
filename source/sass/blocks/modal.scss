@@ -60,7 +60,7 @@
     position: relative;
 
     width: 510px;
-    min-height: 602px;
+    min-height: 611px;
     padding: 53px 80px;
     border-radius: 16px;
     background-color: $color-default-white;
@@ -137,25 +137,11 @@
 
 .modal__form {
   position: relative;
-  padding: 82px 74px 52px;
-  width: 498px;
-  min-height: 803px;
-  color: $color-secondary-alabaster;
-  background-color: $color-secondary-cerulean;
+  width: 100%;
+  color: $color-main-charcoal;
+  background-color: $color-default-white;
   border-radius: 16px;
   z-index: 2;
-
-  @include vp-1199 {
-    padding: 60px 45px 12px;
-    min-height: 780px;
-    width: 442px;
-  }
-
-  @include vp-767 {
-    padding: 51px 15px 50px;
-    width: 100%;
-    min-height: 753px;
-  }
 }
 
 .modal__form h2 {
@@ -163,28 +149,12 @@
 
   margin: 0 0 25px;
   color: $color-default-white;
-
-  @include vp-1199 {
-    margin-bottom: 28px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 16px;
-  }
 }
 
 .modal__form p {
   @include text-regular;
 
   margin-bottom: 18px;
-
-  @include vp-1199 {
-    margin-bottom: 30px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 26px;
-  }
 }
 
 .modal__form form {
@@ -192,94 +162,84 @@
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-
-  @include vp-1199 {
-    width: 352px;
-    row-gap: 14px;
-  }
-
-  @include vp-767 {
-    width: 100%;
-    row-gap: 20px
-  }
 }
 
 .modal__name span,
 .modal__phone span,
-.modal__text span,
 .modal__select-wrapper span {
   @include text-xsmall;
 
   margin-bottom: 8px;
   display: block;
+  color: rgba($color-main-charcoal, 0.8);
+}
 
-  @include vp-767 {
-    margin-bottom: 12px;
+.modal__name,
+.modal__phone,
+.modal__select-wrapper {
+  &:hover,
+  &:focus-within {
+    span {
+      color: $color-main-charcoal;
+    }
+
+    input,
+    button {
+      border-color: $color-main-charcoal;
+    }
+  }
+
+  &:focus-visible,
+  &:active {
+    outline: none;
+  }
+
+  &.disabled {
+    color: rgba($color-btn-disabled, 0.6);
+    pointer-events: none;
+
+    input,
+    button {
+      background-color: rgba($color-btn-disabled, 0.2);
+    }
+  }
+
+  &.is-invalid {
+    input,
+    button {
+      border: 1px solid #ff5e66;
+      background: rgba(255, 94, 102, 0.2);
+    }
   }
 }
 
-.modal__form input,
-textarea {
-  padding: 8px;
+.modal__form input {
+  padding: 8px 20px;
   width: 100%;
   min-height: 50px;
-  color: $color-secondary-alabaster;
+  color: $color-main-charcoal;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba($color-main-charcoal, 0.3);
   border-radius: 8px;
 }
 
-.modal__form textarea {
-  min-height: 98px;
-
-  @include vp-767 {
-    min-height: 94px;
-  }
-}
-
 .modal__select-wrapper {
-  margin-top: -4px;
-  margin-bottom: 4px;
-  padding-top: 0;
-  padding-bottom: 0;
-
-  @include vp-1199 {
-    margin-top: -6px;
-    margin-bottom: 6px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 0;
-  }
+  margin: 0 0 3px;
+  padding: 0;
+  width: 100%;
 }
 
 .modal__select-wrapper > span {
-  margin-bottom: 10px;
-
-  @include vp-1199 {
-    margin-bottom: 8px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 12px;
-  }
+  margin-bottom: 9px;
 }
 
 .modal__select-btn {
   position: relative;
   padding: 8px;
   width: 350px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba($color-main-charcoal, 0.3);
   border-radius: 8px;
   min-height: 50px;
-
-  @include vp-1199 {
-    width: 352px;
-  }
-
-  @include vp-767 {
-    width: 100%;
-  }
 }
 
 .modal__select-btn span {
@@ -299,8 +259,8 @@ textarea {
 
 .modal__select-list {
   width: 350px;
-  background-color: $color-secondary-cerulean;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: $color-default-white;
+  border: 1px solid $color-main-charcoal;
   border-radius: 8px;
 }
 
@@ -319,25 +279,13 @@ textarea {
 
 .modal__checkbox {
   padding: 0;
-  margin-bottom: 24px;
-
-  @include vp-1199 {
-    margin-bottom: 26px;
-  }
-
-  @include vp-767 {
-    margin-bottom: 10px;
-  }
+  margin-bottom: 13px;
 }
 
 .modal__checkbox .modal__checkbox-text {
   @include text-xxsmall;
 
   margin: 0;
-
-  @include vp-767 {
-    width: 230px;
-  }
 }
 
 .modal__checkbox label {
@@ -351,7 +299,7 @@ textarea {
   margin-right: 10px;
   width: 20px;
   height: 20px;
-  background-color: transparent;
+  background-color: $color-secondary-cerulean;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 2px;
 
@@ -360,40 +308,13 @@ textarea {
   }
 }
 
-.modal__checkbox input:checked+.modal__checkbox-mark {
-  background: $color-default-white url("../img/sprite.svg#checkbox") no-repeat center / 14px 8px;
+.modal__checkbox input:checked + .modal__checkbox-mark {
+  background: $color-secondary-cerulean url("../img/sprite.svg#checkbox-white") no-repeat center / 14px 8px;
 }
 
 .modal__checkbox.is-invalid .modal__checkbox-mark {
   border: 1px solid #ff5e66;
-  opacity: 0.7;
-  background: rgba(255, 94, 102, 0.20);
-}
-
-.modal__btn {
-  @include btn;
-
-  padding-left: 30px;
-  width: 100%;
-  min-height: 54px;
-  color: $color-default-white;
-  background-color: transparent;
-  border: 1px solid $color-default-white;
-  gap: 30px;
-
-  @include vp-767 {
-    min-height: 42px;
-  }
-}
-
-.modal__btn span {
-  display: block;
-  width: 240px;
-  text-align: center;
-
-  @include vp-767 {
-    width: 162px;
-  }
+  background: rgba(255, 94, 102, 0.2);
 }
 
 .modal__btn .modal__icon-wrapper {
@@ -402,7 +323,7 @@ textarea {
   right: 4px;
   width: 46px;
   height: 46px;
-  background-color: $color-default-white;
+  background-color: $color-secondary-cerulean;
 
   @include vp-767 {
     width: 34px;
@@ -410,6 +331,47 @@ textarea {
   }
 
   svg {
-    stroke: $color-secondary-cerulean;
+    stroke: $color-default-white;
+  }
+}
+
+.modal__btn {
+  @include btn;
+
+  padding-left: 30px;
+  width: 194px;
+  min-height: 54px;
+  align-self: center;
+  color: $color-secondary-cerulean;
+  background-color: transparent;
+  border: 1px solid $color-secondary-cerulean;
+  gap: 30px;
+
+  @include vp-767 {
+    min-height: 42px;
+  }
+
+
+  &:hover,
+  &:focus-visible {
+    color: $color-default-white;
+    background-color: $color-secondary-cerulean;
+
+    .modal__icon-wrapper {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      stroke: $color-secondary-cerulean;
+      transform: rotate(45deg);
+      transition: transform $trans-default;
+    }
+  }
+
+  &:active {
+    .modal__btn-text,
+    svg {
+      opacity: 0.7;
+    }
   }
 }
