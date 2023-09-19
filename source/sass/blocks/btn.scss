@@ -20,13 +20,13 @@
     border: 1px solid $color-btn-disabled;
     pointer-events: none;
 
-    .btn-wrapper {
+    & .btn__wrapper {
       background-color: $color-btn-disabled;
     }
   }
 }
 
-.btn-wrapper {
+.btn__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +36,6 @@
   background-color: $color-secondary-cerulean;
 }
 
-.btn-wrapper svg {
+.btn__wrapper svg {
   stroke: $color-default-white;
 }

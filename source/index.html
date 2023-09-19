@@ -2,14 +2,15 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание проекта">
   <title>«Маса» – программы стажировок.</title>
-  <link rel="preload" href="fonts/manrope-light.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/manrope-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicons/favicon192.png">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -24,13 +25,13 @@
         </a>
         <button class="header__menu-btn btn" type="button">
           <span class="header__menu-btn-text">Меню</span>
-          <span class="header__menu-icon btn-wrapper"></span>
+          <span class="header__menu-icon btn__wrapper"></span>
         </button>
         <nav class="header__nav header__nav--closed">
           <div class="header__nav-list-wrapper" data-accordion="parent">
             <ul class="header__nav-list" data-accordion="content">
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link">О проекте</a>
+                <a href="#about" class="header__nav-link">О проекте</a>
               </li>
 
               <li class="header__nav-item" data-accordion="element">
@@ -44,16 +45,16 @@
                   <div class="header__accordion-wrapper">
                     <ul class="header__nav-sublist">
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Стажировки</a>
+                        <a href="#program" class="header__nav-sublink">Стажировки</a>
                       </li>
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Волонтёрство</a>
+                        <a href="#program" class="header__nav-sublink">Волонтёрство</a>
                       </li>
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Учёба</a>
+                        <a href="#program" class="header__nav-sublink">Учёба</a>
                       </li>
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Религия</a>
+                        <a href="#program" class="header__nav-sublink">Религия</a>
                       </li>
                     </ul>
                   </div>
@@ -61,10 +62,10 @@
               </li>
 
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Как поехать</a>
+                <a href="#grant" class="header__nav-link">Как поехать</a>
               </li>
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Отзывы</a>
+                <a href="#reviews" class="header__nav-link">Отзывы</a>
               </li>
 
               <li class="header__nav-item" data-accordion="element">
@@ -78,30 +79,31 @@
                   <div class="header__accordion-wrapper">
                     <ul class="header__nav-sublist">
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Общее</a>
+                        <a href="#news" class="header__nav-sublink">Общее</a>
                       </li>
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Волонтёрство</a>
+                        <a href="#news" class="header__nav-sublink">Волонтёрство</a>
                       </li>
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Стажировки</a>
+                        <a href="#news" class="header__nav-sublink">Стажировки</a>
                       </li>
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Карьера</a>
+                        <a href="#news" class="header__nav-sublink">Карьера</a>
                       </li>
                       <li class="header__nav-subitem">
-                        <a href="#" class="header__nav-sublink">Путешествия</a>
+                        <a href="#news" class="header__nav-sublink">Путешествия</a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </li>
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Контакты</a>
+                <a href="#contacts" class="header__nav-link">Контакты</a>
               </li>
             </ul>
           </div>
         </nav>
+        <div class="header__overlay"></div>
       </div>
     </header>
     <main class="main">
@@ -137,10 +139,10 @@
                 <div class="hero__slider-info">
                   <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных
                     организациях.</p>
-                  <div class="hero__slider-btn-wrapper">
-                    <a class="hero__slider-btn btn">
+                  <div class="hero__slider-btn__wrapper">
+                    <a class="hero__slider-btn btn" href="#">
                       <span class="hero__slider-btn-text">Подробнее</span>
-                      <span class="hero__icon-wrapper btn-wrapper">
+                      <span class="hero__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -178,10 +180,10 @@
                 <div class="hero__slider-info">
                   <p>Возможности для&nbsp;преподавания, органического сельского хозяйства, устойчивого образа жизни
                     и&nbsp;другое.</p>
-                  <div class="hero__slider-btn-wrapper">
-                    <a class="hero__slider-btn btn">
+                  <div class="hero__slider-btn__wrapper">
+                    <a class="hero__slider-btn btn" href="#">
                       <span class="hero__slider-btn-text">Подробнее</span>
-                      <span class="hero__icon-wrapper btn-wrapper">
+                      <span class="hero__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -219,10 +221,10 @@
                 <div class="hero__slider-info">
                   <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая
                     настоящий израильский стиль жизни!</p>
-                  <div class="hero__slider-btn-wrapper">
-                    <a class="hero__slider-btn btn">
+                  <div class="hero__slider-btn__wrapper">
+                    <a class="hero__slider-btn btn" href="#">
                       <span class="hero__slider-btn-text">Подробнее</span>
-                      <span class="hero__icon-wrapper btn-wrapper">
+                      <span class="hero__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -236,7 +238,7 @@
         </div>
       </section>
 
-      <section class="main__about about">
+      <section class="main__about about" id="about">
         <div class="container">
           <div class="about__intro">
             <h2>О&nbsp;проекте «Маса»</h2>
@@ -248,7 +250,7 @@
               этих людей способностью инициировать значимые изменения.</p>
             <a href="#" class="about__link btn" data-open-modal="feedback">
               <span class="about__link-text">Подробнее о проекте</span>
-              <span class="about__icon-wrapper btn-wrapper">
+              <span class="about__icon-wrapper btn__wrapper">
                 <svg width="10" height="10">
                   <use href="./img/sprite.svg#arrow"></use>
                 </svg>
@@ -259,19 +261,19 @@
           <div class="about__features">
             <ul class="about__list">
               <li class="about__item about__item--programms">
-                <h5>Более 250 программ</h5>
+                <h4>Более 250 программ</h4>
                 <p>учебных и&nbsp;рабочих,<br>разной длительностью от&nbsp;3&nbsp;месяцев до&nbsp;1&nbsp;года</p>
               </li>
               <li class="about__item about__item--members">
-                <h5>Более 3000 участников</h5>
+                <h4>Более 3000 участников</h4>
                 <p>уже успешно прошли программу от&nbsp;«Маса» и&nbsp;остались в&nbsp;Израиле</p>
               </li>
               <li class="about__item about__item--cost">
-                <h5>от&nbsp;4&nbsp;200&nbsp;$ до&nbsp;8&nbsp;400&nbsp;$</h5>
+                <h4>От&nbsp;4&nbsp;200&nbsp;$ до&nbsp;8&nbsp;400&nbsp;$</h4>
                 <p>грант всем участникам для&nbsp;комфортного прохождения программы</p>
               </li>
               <li class="about__item about__item--countries">
-                <h5>участники<br> из&nbsp;60 стран</h5>
+                <h4>Участники из&nbsp;60 стран</h4>
                 <p>студенты со&nbsp;всего<br>мира приезжают<br>на&nbsp;программу&nbsp;«Маса»</p>
               </li>
             </ul>
@@ -279,13 +281,13 @@
         </div>
       </section>
 
-      <section class="main__programs programs">
+      <section class="main__programs programs" id="program">
         <div class="container">
           <div class="programs__header">
             <h2>Программы</h2>
             <a href="#" class="programs__link btn">
               <span class="programs__link-text">Все программы</span>
-              <span class="programs__icon-wrapper btn-wrapper">
+              <span class="programs__icon-wrapper btn__wrapper">
                 <svg width="10" height="10">
                   <use href="./img/sprite.svg#arrow"></use>
                 </svg>
@@ -323,8 +325,8 @@
                   <h3>Стажировки</h3>
                   <div class="programs__slider-info">
                     <p>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</p>
-                    <a class="programs__slider-btn btn" aria-label="Подробнее">
-                      <span class="programs__icon-wrapper btn-wrapper">
+                    <a class="programs__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="programs__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -363,8 +365,8 @@
                   <h3>Волонтёрство</h3>
                   <div class="programs__slider-info">
                     <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
-                    <a class="programs__slider-btn btn" aria-label="Подробнее">
-                      <span class="programs__icon-wrapper btn-wrapper">
+                    <a class="programs__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="programs__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -403,8 +405,8 @@
                   <h3>Учёба</h3>
                   <div class="programs__slider-info">
                     <p>Получите образование и&nbsp;измените свое будущее.</p>
-                    <a class="programs__slider-btn btn" aria-label="Подробнее">
-                      <span class="programs__icon-wrapper btn-wrapper">
+                    <a class="programs__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="programs__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -443,8 +445,8 @@
                   <h3>Стажировки</h3>
                   <div class="programs__slider-info">
                     <p>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</p>
-                    <a class="programs__slider-btn btn" aria-label="Подробнее">
-                      <span class="programs__icon-wrapper btn-wrapper">
+                    <a class="programs__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="programs__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -483,8 +485,8 @@
                   <h3>Волонтёрство</h3>
                   <div class="programs__slider-info">
                     <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
-                    <a class="programs__slider-btn btn" aria-label="Подробнее">
-                      <span class="programs__icon-wrapper btn-wrapper">
+                    <a class="programs__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="programs__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -523,8 +525,8 @@
                   <h3>Учёба</h3>
                   <div class="programs__slider-info">
                     <p>Получите образование и&nbsp;измените свое будущее.</p>
-                    <a class="programs__slider-btn btn" aria-label="Подробнее">
-                      <span class="programs__icon-wrapper btn-wrapper">
+                    <a class="programs__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="programs__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -553,7 +555,7 @@
         </div>
       </section>
 
-      <section class="main__grant grant">
+      <section class="main__grant grant" id="grant">
         <div class="container">
           <div class="grant__info">
             <h2>Как поехать</h2>
@@ -588,7 +590,7 @@
         </div>
       </section>
 
-      <section class="main__news news">
+      <section class="main__news news" id="news">
         <div class="container">
           <h2>Новости и материалы</h2>
           <ul class="news__filter-list">
@@ -611,7 +613,7 @@
 
           <div class="news__swiper swiper">
             <div class="news__swiper-wrapper swiper-wrapper">
-              <div class="news__swiper-slide swiper-slide">
+              <div class="news__swiper-slide swiper-slide news__swiper-slide--first">
                 <div class="news__overlay-wrapper">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)"
@@ -638,8 +640,8 @@
                   <div class="news__slider-info">
                     <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как&nbsp;прошла 6-месячная стажировка
                       в&nbsp;ISOFound</p>
-                    <a class="news__slider-btn btn" aria-label="Подробнее">
-                      <span class="news__icon-wrapper btn-wrapper">
+                    <a class="news__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="news__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -675,8 +677,8 @@
                   <h3>Путешествуем по&nbsp;Израилю</h3>
                   <div class="news__slider-info">
                     <p>Какие места посещают наши студенты весной</p>
-                    <a class="news__slider-btn btn" aria-label="Подробнее">
-                      <span class="news__icon-wrapper btn-wrapper">
+                    <a class="news__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="news__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -712,8 +714,8 @@
                   <h3>Новая программа волонтёрства</h3>
                   <div class="news__slider-info">
                     <p>Программа помощи детям длительностью 4 месяца</p>
-                    <a class="news__slider-btn btn" aria-label="Подробнее">
-                      <span class="news__icon-wrapper btn-wrapper">
+                    <a class="news__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="news__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -749,8 +751,8 @@
                   <h3>Построй свою карьеру</h3>
                   <div class="news__slider-info">
                     <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                    <a class="news__slider-btn btn" aria-label="Подробнее">
-                      <span class="news__icon-wrapper btn-wrapper">
+                    <a class="news__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="news__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -787,8 +789,8 @@
                   <div class="news__slider-info">
                     <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка
                       в&nbsp;ISOFound</p>
-                    <a class="news__slider-btn btn" aria-label="Подробнее">
-                      <span class="news__icon-wrapper btn-wrapper">
+                    <a class="news__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="news__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -824,8 +826,8 @@
                   <h3>Путешествуем по&nbsp;Израилю</h3>
                   <div class="news__slider-info">
                     <p>Какие места посещают наши студенты весной</p>
-                    <a class="news__slider-btn btn" aria-label="Подробнее">
-                      <span class="news__icon-wrapper btn-wrapper">
+                    <a class="news__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="news__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -861,8 +863,8 @@
                   <h3>Новая программа волонтёрства</h3>
                   <div class="news__slider-info">
                     <p>Программа помощи детям длительностью 4 месяца</p>
-                    <a class="news__slider-btn btn" aria-label="Подробнее">
-                      <span class="news__icon-wrapper btn-wrapper">
+                    <a class="news__slider-btn btn" href="#" aria-label="Подробнее">
+                      <span class="news__icon-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="./img/sprite.svg#arrow"></use>
                         </svg>
@@ -890,7 +892,7 @@
         </div>
       </section>
 
-      <section class="main__faq faq">
+      <section class="main__faq faq" id="faq">
         <div class="container">
           <h2>Вопросы и ответы</h2>
 
@@ -964,7 +966,7 @@
         </div>
       </section>
 
-      <section class="main__reviews reviews">
+      <section class="main__reviews reviews" id="reviews">
         <div class="container">
           <h2>Отзывы</h2>
           <div class="reviews__swiper swiper">
@@ -982,11 +984,11 @@
                     <p>Сара Аврахам</p>
                   </div>
                   <div class="reviews__program">
-                    <h4>программа</h4>
+                    <p>программа</p>
                     <span>Masa Art Challenge</span>
                   </div>
                   <div class="reviews__date">
-                    <h4>Дата</h4>
+                    <p>Дата</p>
                     <span>Осень 2022</span>
                   </div>
                 </div>
@@ -1013,11 +1015,11 @@
                     <p>Давид Иммервар</p>
                   </div>
                   <div class="reviews__program">
-                    <h4>программа</h4>
+                    <p>программа</p>
                     <span>Volunteer Chance</span>
                   </div>
                   <div class="reviews__date">
-                    <h4>Дата</h4>
+                    <p>Дата</p>
                     <span>Лето 2022</span>
                   </div>
                 </div>
@@ -1044,11 +1046,11 @@
                     <p>Сара Аврахам</p>
                   </div>
                   <div class="reviews__program">
-                    <h4>программа</h4>
+                    <p>программа</p>
                     <span>Masa Art Challenge</span>
                   </div>
                   <div class="reviews__date">
-                    <h4>Дата</h4>
+                    <p>Дата</p>
                     <span>Осень 2022</span>
                   </div>
                 </div>
@@ -1082,7 +1084,7 @@
         </div>
       </section>
 
-      <section class="main__contacts contacts">
+      <section class="main__contacts contacts" id="contacts">
         <div class="container">
           <div class="contacts__info">
             <h2>Контакты</h2>
@@ -1107,7 +1109,7 @@
         </div>
       </section>
 
-      <section class="main__feeback feedback">
+      <section class="main__feeback feedback" id="feedback">
         <div class="container">
           <div class="feedback__form form" data-form-validate data-callback="base">
             <h2>Напишите нам</h2>
@@ -1134,7 +1136,7 @@
               </div>
               <div class="feedback__select-wrapper custom-select" data-select="data-select" data-validate-type="select" data-required="true" data-name="city" data-id="city">
                 <span>Выберите город</span>
-                <button class="feedback__select-btn custom-select__button" type="button" aria-label="Выберите город.">
+                <button class="feedback__select-btn custom-select__button" type="button">
                   <span class="feedback__select-text custom-select__text"></span>
                   <span class="feedback__select-icon custom-select__icon"></span>
                 </button>
@@ -1154,7 +1156,7 @@
               </div>
               <button class="feedback__btn btn" type="submit">
                 <span class="feedback__btn-text">Отправить</span>
-                <span class="feedback__icon-wrapper btn-wrapper">
+                <span class="feedback__icon-wrapper btn__wrapper">
                   <svg width="10" height="10">
                     <use href="./img/sprite.svg#arrow"></use>
                   </svg>
@@ -1190,22 +1192,22 @@
 
         <ul class="footer__list">
           <li class="footer__item">
-            <a href="#" class="footer__link">О проекте</a>
+            <a href="#about" class="footer__link">О проекте</a>
           </li>
           <li class="footer__item">
-            <a href="#" class="footer__link">Программы</a>
+            <a href="#program" class="footer__link">Программы</a>
           </li>
           <li class="footer__item">
-            <a href="#" class="footer__link">Как поехать</a>
+            <a href="#grant" class="footer__link">Как поехать</a>
           </li>
           <li class="footer__item">
-            <a href="#" class="footer__link">Отзывы</a>
+            <a href="#reviews" class="footer__link">Отзывы</a>
           </li>
           <li class="footer__item">
-            <a href="#" class="footer__link">Новости</a>
+            <a href="#news" class="footer__link">Новости</a>
           </li>
           <li class="footer__item">
-            <a href="#" class="footer__link">Контакты</a>
+            <a href="#contacts" class="footer__link">Контакты</a>
           </li>
         </ul>
 
@@ -1285,7 +1287,7 @@
             </div>
             <button class="modal__btn btn" type="submit">
               <span class="modal__btn-text">Отправить</span>
-              <span class="modal__icon-wrapper btn-wrapper">
+              <span class="modal__icon-wrapper btn__wrapper">
                 <svg width="10" height="10">
                   <use href="./img/sprite.svg#arrow"></use>
                 </svg>

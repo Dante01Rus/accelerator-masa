@@ -17,6 +17,24 @@
   width: 100%;
 }
 
+.header__overlay {
+  display: none;
+
+  &--menu-opened {
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-form-overlay;
+    z-index: 1;
+
+    cursor: pointer;
+  }
+}
+
 .header__logo-link {
   display: block;
   height: 52px;
@@ -26,6 +44,7 @@
   gap: 20px;
   width: 134px;
   transition: all $trans-default;
+  z-index: 2;
 
   &:hover,
   &:focus-visible {
@@ -116,6 +135,7 @@
   background-color: $color-secondary-cerulean;
   border-radius: 16px;
   transition: all 0.3s ease-out;
+  z-index: 2;
 
   @include vp-1199 {
     right: 45px;

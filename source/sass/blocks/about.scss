@@ -255,7 +255,7 @@
   margin: 0;
 }
 
-.about__item--programms h5 {
+.about__item--programms h4 {
   margin: 0;
   margin-right: 36px;
   width: 144px;
@@ -265,7 +265,7 @@
   width: 178px;
 }
 
-.about__item--members h5 {
+.about__item--members h4 {
   margin: 0;
   margin-right: 20px;
   width: 171px;
@@ -275,7 +275,7 @@
   width: 167px;
 }
 
-.about__item--cost h5 {
+.about__item--cost h4 {
   margin: 0;
   margin-right: 46px;
   width: 134px;
@@ -285,11 +285,7 @@
   width: 190px;
 }
 
-.about__item--countries h5 br {
-  display: none;
-}
-
-.about__item--countries h5 {
+.about__item--countries h4 {
   margin: 0;
   margin-right: 30px;
   width: 163px;
@@ -299,7 +295,7 @@
   width: 166px;
 }
 
-.about__item h5 {
+.about__item h4 {
   @include title-h5;
 
   @include vp-1199 {

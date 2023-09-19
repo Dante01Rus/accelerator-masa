@@ -3,7 +3,7 @@
 }
 
 .reviews .container {
-  padding-top: 24px;
+  padding-top: 64px;
   padding-bottom: 121px;
 
   @include vp-1199 {
@@ -139,7 +139,8 @@
   }
 }
 
-.reviews__info h4 {
+.reviews__program p,
+.reviews__date p {
   @include caption;
 
   margin: 0 0 1px;
