@@ -18,7 +18,7 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <a href="index.html" class="header__logo-link">
+        <a href="index.html" class="header__logo-link" aria-label="Логотип проекта Маса">
           <svg width="52" height="52">
             <use href="./img/sprite.svg#logo"></use>
           </svg>
@@ -139,7 +139,7 @@
                 <div class="hero__slider-info">
                   <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных
                     организациях.</p>
-                  <div class="hero__slider-btn__wrapper">
+                  <div class="hero__slider-btn-wrapper">
                     <a class="hero__slider-btn btn" href="#">
                       <span class="hero__slider-btn-text">Подробнее</span>
                       <span class="hero__icon-wrapper btn__wrapper">
@@ -169,7 +169,7 @@
                   <source media="(max-width: 1199px)"
                     srcset="img/hero/hero-2-tablet.png 1x, img/hero/hero-2-tablet@2x.png 2x" width="768" height="1024">
                   <img src="img/hero/hero-2.png" srcset="img/hero/hero-2@2x.png" width="1440" height="800"
-                    alt="Фотография группы из 5 волонтеров.">
+                    alt="Фотография группы из 5 волонтеров." loading="lazy">
                 </picture>
                 <div class="hero__overlay"></div>
               </div>
@@ -180,7 +180,7 @@
                 <div class="hero__slider-info">
                   <p>Возможности для&nbsp;преподавания, органического сельского хозяйства, устойчивого образа жизни
                     и&nbsp;другое.</p>
-                  <div class="hero__slider-btn__wrapper">
+                  <div class="hero__slider-btn-wrapper">
                     <a class="hero__slider-btn btn" href="#">
                       <span class="hero__slider-btn-text">Подробнее</span>
                       <span class="hero__icon-wrapper btn__wrapper">
@@ -210,7 +210,7 @@
                   <source media="(max-width: 1199px)"
                     srcset="img/hero/hero-3-tablet.png 1x, img/hero/hero-3-tablet@2x.png 2x" width="768" height="1024">
                   <img src="img/hero/hero-3.png" srcset="img/hero/hero-3@2x.png" width="1440" height="800"
-                    alt="Фотография студентки.">
+                    alt="Фотография студентки." loading="lazy">
                 </picture>
                 <div class="hero__overlay"></div>
               </div>
@@ -221,7 +221,7 @@
                 <div class="hero__slider-info">
                   <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая
                     настоящий израильский стиль жизни!</p>
-                  <div class="hero__slider-btn__wrapper">
+                  <div class="hero__slider-btn-wrapper">
                     <a class="hero__slider-btn btn" href="#">
                       <span class="hero__slider-btn-text">Подробнее</span>
                       <span class="hero__icon-wrapper btn__wrapper">
@@ -250,7 +250,7 @@
               этих людей способностью инициировать значимые изменения.</p>
             <a href="#" class="about__link btn" data-open-modal="feedback">
               <span class="about__link-text">Подробнее о проекте</span>
-              <span class="about__icon-wrapper btn__wrapper">
+              <span class="about__icon-wrapper btn-wrapper">
                 <svg width="10" height="10">
                   <use href="./img/sprite.svg#arrow"></use>
                 </svg>
@@ -1117,25 +1117,25 @@
               <div class="feedback__name" data-validate-type="text" data-limitation="name" data-required>
                 <label>
                   <span>Имя</span>
-                  <input type="text" name="name" minlength="1" required autocomplete="off">
+                  <input type="text" name="name" minlength="1" required autocomplete="off" aria-label="Введите имя.">
                 </label>
               </div>
               <div class="feedback__phone" data-validate-type="phone" data-required
                 data-matrix="___________">
                 <label>
                   <span>Телефон</span>
-                  <input type="text" name="phone" required autocomplete="off">
+                  <input type="text" name="phone" required autocomplete="off" aria-label="Введите номер телефона.">
                 </label>
               </div>
               <div class="feedback__text" data-validate-type="text" data-limitation="name" data-required>
                 <label>
                   <span>Ваше сообщение</span>
-                  <textarea name="message" required></textarea>
+                  <textarea name="message" required aria-label="Напишите интересующие вас вопросы."></textarea>
                 </label>
               </div>
               <div class="feedback__select-wrapper custom-select" data-select="data-select" data-validate-type="select" data-required="true" data-name="city" data-id="city">
                 <span>Выберите город</span>
-                <button class="feedback__select-btn custom-select__button" type="button">
+                <button class="feedback__select-btn custom-select__button" type="button" aria-label="Выберите ваш город.">
                   <span class="feedback__select-text custom-select__text"></span>
                   <span class="feedback__select-icon custom-select__icon"></span>
                 </button>
@@ -1183,7 +1183,7 @@
 
     <footer class="footer">
       <div class="container">
-        <a href="index.html" class="footer__logo-link">
+        <a href="index.html" class="footer__logo-link" aria-label="Логотип проекта Маса">
           <svg width="52" height="52">
             <use href="./img/sprite.svg#logo"></use>
           </svg>
@@ -1217,21 +1217,21 @@
 
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a href="#" class="footer__social-link">
+            <a href="#" class="footer__social-link" aria-label="Ссылка на страницу в Вконтакте">
               <svg width="16" height="16">
                 <use href="./img/sprite.svg#vk-icon"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
-            <a href="#" class="footer__social-link">
+            <a href="#" class="footer__social-link" aria-label="Ссылка на страницу в одноклассниках">
               <svg width="16" height="16">
                 <use href="./img/sprite.svg#ok-icon"></use>
               </svg>
             </a>
           </li>
           <li class="footer__social-item">
-            <a href="#" class="footer__social-link">
+            <a href="#" class="footer__social-link" aria-label="Ссылка на канал реддит.">
               <svg width="16" height="16">
                 <use href="./img/sprite.svg#reddit-icon"></use>
               </svg>

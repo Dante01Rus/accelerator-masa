@@ -1,35 +1,10 @@
 const swiper = () => {
-  /**
-   * Swiper 8.4.7
-   * Most modern mobile touch slider and framework with hardware accelerated transitions
-   * https://swiperjs.com
-   *
-   * Copyright 2014-2023 Vladimir Kharlampidi
-   *
-   * Released under the MIT License
-   *
-   * Released on: January 30, 2023
-   */
-
   (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
       typeof define === 'function' && define.amd ? define(factory) :
         (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Swiper = factory());
   })(this, (function () { 'use strict';
 
-    /**
-     * SSR Window 4.0.2
-     * Better handling for window object in SSR environment
-     * https://github.com/nolimits4web/ssr-window
-     *
-     * Copyright 2021, Vladimir Kharlampidi
-     *
-     * Licensed under MIT
-     *
-     * Released on: December 13, 2021
-     */
-
-    /* eslint-disable no-param-reassign */
     function isObject$1(obj) {
       return obj !== null && typeof obj === 'object' && 'constructor' in obj && obj.constructor === Object;
     }
@@ -203,19 +178,6 @@ const swiper = () => {
       extend$1(win, ssrWindow);
       return win;
     }
-
-    /**
-     * Dom7 4.0.4
-     * Minimalistic JavaScript library for DOM manipulation, with a jQuery-compatible API
-     * https://framework7.io/docs/dom7.html
-     *
-     * Copyright 2022, Vladimir Kharlampidi
-     *
-     * Licensed under MIT
-     *
-     * Released on: January 11, 2022
-     */
-    /* eslint-disable no-proto */
 
     function makeReactive(obj) {
       const proto = obj.__proto__;

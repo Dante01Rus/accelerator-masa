@@ -2,9 +2,9 @@ const heroSwiper = new Swiper('.hero__swiper', {
   slidesPerView: 1,
   keyboard: true,
   loop: true,
-  autoplay: {
-    delay: 3000,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  // },
   focusableElements: 'a, button',
 
   pagination: {
