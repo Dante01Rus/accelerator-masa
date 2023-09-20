@@ -1,11 +1,11 @@
 .feedback {
   background-color: $color-secondary-alabaster;
+  padding-bottom: 30px;
 }
 
 .feedback .container {
   position: relative;
   padding-top: 121px;
-  padding-bottom: 30px;
   border-radius: 16px;
   overflow: hidden;
 
@@ -19,16 +19,21 @@
   }
 }
 
+.feedback__form-wrapper {
+  position: relative;
+  border-radius: 16px;
+  height: auto;
+}
+
 .feedback__background {
   position: absolute;
   width: calc(100vw - 200px);
   max-width: 1240px;
-  top: 121px;
-  left: 100px;
+  height: 100%;
+  top: 0;
+  left: 0;
 
   @include vp-1199 {
-    top: 100px;
-    left: calc(100vw - 723px);
     width: 678px;
   }
 
@@ -38,11 +43,7 @@
 }
 
 .feedback__background img {
-  height: 803px;
-
-  @include vp-1199 {
-    height: auto;
-  }
+  height: 100%;
 }
 
 .feedback__form {
@@ -56,7 +57,7 @@
   z-index: 2;
 
   @include vp-1199 {
-    padding: 60px 45px 12px;
+    padding: 60px 45px 58px;
     min-height: 780px;
     width: 442px;
   }

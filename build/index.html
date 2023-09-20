@@ -107,7 +107,8 @@
       </div>
     </header>
     <main class="main">
-      <h1 class="visually-hidden">&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля и&nbsp;Еврейского агентства Сохнут.</h1>
+      <h1 class="visually-hidden">&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля
+        и&nbsp;Еврейского агентства Сохнут.</h1>
 
       <section class="main__hero hero">
         <div class="hero__swiper swiper">
@@ -242,15 +243,17 @@
         <div class="container">
           <div class="about__intro">
             <h2>О&nbsp;проекте «Маса»</h2>
-            <p>&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля и&nbsp;Еврейского агентства Сохнут.</p>
+            <p>&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля и&nbsp;Еврейского агентства
+              Сохнут.</p>
             <h3>Наша цель</h3>
             <p>Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на&nbsp;ранних
               и&nbsp;средних стадиях карьеры, предоставляя им инструменты для&nbsp;решения сложных проблем,
-              с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash; наделить
+              с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash;
+              наделить
               этих людей способностью инициировать значимые изменения.</p>
             <a href="#" class="about__link btn" data-open-modal="feedback">
               <span class="about__link-text">Подробнее о проекте</span>
-              <span class="about__icon-wrapper btn-wrapper">
+              <span class="about__icon-wrapper btn__wrapper">
                 <svg width="10" height="10">
                   <use href="./img/sprite.svg#arrow"></use>
                 </svg>
@@ -566,12 +569,13 @@
                 srcset="img/grant/grant-mobile.webp 1x, img/grant/grant-mobile@2x.webp 2x" width="290" height="200">
               <source type="image/webp" media="(max-width: 1199px)"
                 srcset="img/grant/grant-tablet.webp 1x, img/grant/grant-tablet@2x.webp 2x" width="678" height="375">
-              <source type="image/webp" srcset="img/grant/grant.webp 1x, img/grant/grant@2x.webp 2x" width="498" height="363">
+              <source type="image/webp" srcset="img/grant/grant.webp 1x, img/grant/grant@2x.webp 2x" width="498"
+                height="363">
 
-              <source media="(max-width: 767px)" srcset="img/grant/grant-mobile.png 1x, img/grant/grant-mobile@2x.png 2x"
-                width="290" height="200">
-              <source media="(max-width: 1199px)" srcset="img/grant/grant-tablet.png 1x, img/grant/grant-tablet@2x.png 2x"
-                width="678" height="375">
+              <source media="(max-width: 767px)"
+                srcset="img/grant/grant-mobile.png 1x, img/grant/grant-mobile@2x.png 2x" width="290" height="200">
+              <source media="(max-width: 1199px)"
+                srcset="img/grant/grant-tablet.png 1x, img/grant/grant-tablet@2x.png 2x" width="678" height="375">
               <img src="img/grant/grant.png" srcset="img/grant/grant@2x.png" width="498" height="363"
                 alt="Столб с указателями расстояния до разных городов." loading="lazy">
             </picture>
@@ -975,10 +979,11 @@
                 <div class="reviews__info">
                   <div class="reviews__author">
                     <picture>
-                      <source type="image/webp" srcset="img/reviews/reviews-avatar-1.webp 1x, img/reviews/reviews-avatar-1@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/reviews/reviews-avatar-1.webp 1x, img/reviews/reviews-avatar-1@2x.webp 2x"
                         width="90" height="90">
-                      <img src="img/reviews/reviews-avatar-1.png" srcset="img/reviews/"
-                        width="90" height="90" alt="Аватарка стажера." loading="lazy">
+                      <img src="img/reviews/reviews-avatar-1.png" srcset="img/reviews/" width="90" height="90"
+                        alt="Аватарка стажера." loading="lazy">
                     </picture>
                     <p>Сара Аврахам</p>
                   </div>
@@ -1110,72 +1115,80 @@
 
       <section class="main__feeback feedback" id="feedback">
         <div class="container">
-          <div class="feedback__form form" data-form-validate data-callback="base">
-            <h2>Напишите нам</h2>
-            <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <div class="feedback__name" data-validate-type="text" data-limitation="name" data-required>
-                <label>
-                  <span>Имя</span>
-                  <input type="text" name="name" minlength="1" required autocomplete="off" aria-label="Введите имя.">
-                </label>
-              </div>
-              <div class="feedback__phone" data-validate-type="phone" data-required
-                data-matrix="___________">
-                <label>
-                  <span>Телефон</span>
-                  <input type="text" name="phone" required autocomplete="off" aria-label="Введите номер телефона.">
-                </label>
-              </div>
-              <div class="feedback__text" data-validate-type="text" data-limitation="name" data-required>
-                <label>
-                  <span>Ваше сообщение</span>
-                  <textarea name="message" required aria-label="Напишите интересующие вас вопросы."></textarea>
-                </label>
-              </div>
-              <div class="feedback__select-wrapper custom-select" data-select="data-select" data-validate-type="select" data-required="true" data-name="city" data-id="city">
-                <span>Выберите город</span>
-                <button class="feedback__select-btn custom-select__button" type="button" aria-label="Выберите ваш город.">
-                  <span class="feedback__select-text custom-select__text"></span>
-                  <span class="feedback__select-icon custom-select__icon"></span>
+          <div class="feedback__form-wrapper">
+            <div class="feedback__form form" data-form-validate data-callback="base">
+              <h2>Напишите нам</h2>
+              <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <div class="feedback__name" data-validate-type="text" data-limitation="name" data-required>
+                  <label>
+                    <span>Имя</span>
+                    <input type="text" name="name" minlength="1" required autocomplete="off" aria-label="Введите имя.">
+                  </label>
+                </div>
+                <div class="feedback__phone" data-validate-type="phone" data-required data-matrix="___________">
+                  <label>
+                    <span>Телефон</span>
+                    <input type="text" name="phone" required autocomplete="off" aria-label="Введите номер телефона.">
+                  </label>
+                </div>
+                <div class="feedback__text" data-validate-type="text" data-limitation="name" data-required>
+                  <label>
+                    <span>Ваше сообщение</span>
+                    <textarea name="message" required aria-label="Напишите интересующие вас вопросы."></textarea>
+                  </label>
+                </div>
+                <div class="feedback__select-wrapper custom-select" data-select="data-select"
+                  data-validate-type="select" data-required="true" data-name="city" data-id="city">
+                  <span>Выберите город</span>
+                  <button class="feedback__select-btn custom-select__button" type="button"
+                    aria-label="Выберите ваш город.">
+                    <span class="feedback__select-text custom-select__text"></span>
+                    <span class="feedback__select-icon custom-select__icon"></span>
+                  </button>
+                  <ul class="feedback__select-list custom-select__list" role="listbox">
+                    <li class="feedback__select-item custom-select__item" tabindex="0" data-select-value="moscow"
+                      aria-selected="false" role="option">Москва</li>
+                    <li class="feedback__select-item custom-select__item" tabindex="0"
+                      data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="feedback__select-item custom-select__item" tabindex="0" data-select-value="surgyt"
+                      aria-selected="false" role="option">Сургут</li>
+                    <li class="feedback__select-item custom-select__item" tabindex="0" data-select-value="ekaterinburg"
+                      aria-selected="false" role="option">Екатиренбург</li>
+                  </ul>
+                </div>
+                <div class="feedback__checkbox" data-validate-type="checkbox">
+                  <label>
+                    <input type="checkbox" value="agree" name="processing of personal data">
+                    <span class="feedback__checkbox-mark"></span>
+                    <span class="feedback__checkbox-text">Я согласен на обработку моих персональных данных</span>
+                  </label>
+                </div>
+                <button class="feedback__btn btn" type="submit">
+                  <span class="feedback__btn-text">Отправить</span>
+                  <span class="feedback__icon-wrapper btn__wrapper">
+                    <svg width="10" height="10">
+                      <use href="./img/sprite.svg#arrow"></use>
+                    </svg>
+                  </span>
                 </button>
-                <ul class="feedback__select-list custom-select__list" role="listbox">
-                  <li class="feedback__select-item custom-select__item" tabindex="0" data-select-value="moscow" aria-selected="false" role="option">Москва</li>
-                  <li class="feedback__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
-                  <li class="feedback__select-item custom-select__item" tabindex="0" data-select-value="surgyt" aria-selected="false" role="option">Сургут</li>
-                  <li class="feedback__select-item custom-select__item" tabindex="0" data-select-value="ekaterinburg" aria-selected="false" role="option">Екатиренбург</li>
-                </ul>
-              </div>
-              <div class="feedback__checkbox" data-validate-type="checkbox">
-                <label>
-                  <input type="checkbox" value="agree" name="processing of personal data">
-                  <span class="feedback__checkbox-mark"></span>
-                  <span class="feedback__checkbox-text">Я согласен на обработку моих персональных данных</span>
-                </label>
-              </div>
-              <button class="feedback__btn btn" type="submit">
-                <span class="feedback__btn-text">Отправить</span>
-                <span class="feedback__icon-wrapper btn__wrapper">
-                  <svg width="10" height="10">
-                    <use href="./img/sprite.svg#arrow"></use>
-                  </svg>
-                </span>
-              </button>
-            </form>
-          </div>
-          <div class="feedback__background">
-            <picture>
-              <source type="image/webp" media="(max-width: 1199px)"
-                srcset="img/feedback/feedback-tablet.webp 1x, img/feedback/feedback-tablet@2x.webp 2x" width="678"
-                height="780">
-              <source type="image/webp" srcset="img/feedback/feedback.webp 1x, img/feedback/feedback@2x.webp 2x" width="1240"
-                height="803">
+              </form>
+            </div>
+            <div class="feedback__background">
+              <picture>
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/feedback/feedback-tablet.webp 1x, img/feedback/feedback-tablet@2x.webp 2x" width="678"
+                  height="780">
+                <source type="image/webp" srcset="img/feedback/feedback.webp 1x, img/feedback/feedback@2x.webp 2x"
+                  width="1240" height="803">
 
-              <source media="(max-width: 1199px)"
-                srcset="img/feedback/feedback-tablet.png 1x, img/feedback/feedback-tablet@2x.png 2x" width="678" height="780">
-              <img src="img/feedback/feedback.png" srcset="img/feedback/feedback@2x.png" width="1240" height="803"
-                alt="Фотография девушки с бейджем волонтера." loading="lazy">
-            </picture>
+                <source media="(max-width: 1199px)"
+                  srcset="img/feedback/feedback-tablet.png 1x, img/feedback/feedback-tablet@2x.png 2x" width="678"
+                  height="780">
+                <img src="img/feedback/feedback.png" srcset="img/feedback/feedback@2x.png" width="1240" height="803"
+                  alt="Фотография девушки с бейджем волонтера." loading="lazy">
+              </picture>
+            </div>
           </div>
         </div>
       </section>
@@ -1212,7 +1225,7 @@
 
         <div class="footer__copy-privacy">
           <span class="footer__copyright">Masa © 2023 Все права защищены</span>
-          <a  href="#" class="footer__privacy">Политика конфиденциальности</a>
+          <a href="#" class="footer__privacy">Политика конфиденциальности</a>
         </div>
 
         <ul class="footer__social-list">
@@ -1257,24 +1270,28 @@
                 <input type="text" name="name" minlength="1" required autocomplete="off">
               </label>
             </div>
-            <div class="modal__phone" data-validate-type="phone" data-required
-              data-matrix="___________">
+            <div class="modal__phone" data-validate-type="phone" data-required data-matrix="___________">
               <label>
                 <span>Телефон</span>
                 <input type="text" name="phone" required autocomplete="off">
               </label>
             </div>
-            <div class="modal__select-wrapper custom-select" data-select="data-select" data-validate-type="select" data-required="true" data-name="city" data-id="city">
+            <div class="modal__select-wrapper custom-select" data-select="data-select" data-validate-type="select"
+              data-required="true" data-name="city" data-id="city">
               <span>Выберите город</span>
               <button class="modal__select-btn custom-select__button" type="button" aria-label="Выберите город.">
                 <span class="modal__select-text custom-select__text"></span>
                 <span class="modal__select-icon custom-select__icon"></span>
               </button>
               <ul class="modal__select-list custom-select__list" role="listbox">
-                <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="moscow" aria-selected="false" role="option">Москва</li>
-                <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
-                <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="surgyt" aria-selected="false" role="option">Сургут</li>
-                <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="ekaterinburg" aria-selected="false" role="option">Екатиренбург</li>
+                <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="moscow"
+                  aria-selected="false" role="option">Москва</li>
+                <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg"
+                  aria-selected="false" role="option">Санкт-Петербург</li>
+                <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="surgyt"
+                  aria-selected="false" role="option">Сургут</li>
+                <li class="modal__select-item custom-select__item" tabindex="0" data-select-value="ekaterinburg"
+                  aria-selected="false" role="option">Екатиренбург</li>
               </ul>
             </div>
             <div class="modal__checkbox" data-validate-type="checkbox">
@@ -1294,7 +1311,7 @@
             </button>
           </form>
         </div>
-      <button class="modal__close-btn btn-reset" type="submit" aria-label="Закрыть попап" data-close-modal>
+        <button class="modal__close-btn btn-reset" type="submit" aria-label="Закрыть попап" data-close-modal>
           <svg width="15" height="15">
             <use href="./img/sprite.svg#cross"></use>
           </svg>

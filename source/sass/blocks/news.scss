@@ -147,6 +147,13 @@
       max-width: none;
     }
   }
+
+  &:nth-child(2n - 1) {
+    @include vp-767 {
+      height: 103.1vw;
+      max-width: none;
+    }
+  }
 }
 
 .news__overlay-wrapper {

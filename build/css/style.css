@@ -5294,6 +5294,12 @@ button,
     max-width: none;
   }
 }
+@media (max-width: 767px) {
+  .news__swiper-slide:nth-child(2n-1) {
+    height: 103.1vw;
+    max-width: none;
+  }
+}
 
 .news__overlay-wrapper {
   position: absolute;
@@ -5938,6 +5944,7 @@ button,
 .faq__accordion-button {
   position: relative;
   padding: 42px 40px;
+  padding-right: 30%;
   width: 100%;
   text-align: start;
   color: #316dc2;
@@ -5951,11 +5958,13 @@ button,
 @media (max-width: 1199px) {
   .faq__accordion-button {
     padding: 36px 29px;
+    padding-right: 18%;
   }
 }
 @media (max-width: 767px) {
   .faq__accordion-button {
     padding: 21px 14px;
+    padding-right: 18%;
     border-radius: 14px;
   }
 }
@@ -6727,12 +6736,12 @@ button,
 
 .feedback {
   background-color: #f0efe9;
+  padding-bottom: 30px;
 }
 
 .feedback .container {
   position: relative;
   padding-top: 121px;
-  padding-bottom: 30px;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -6748,17 +6757,22 @@ button,
   }
 }
 
+.feedback__form-wrapper {
+  position: relative;
+  border-radius: 16px;
+  height: auto;
+}
+
 .feedback__background {
   position: absolute;
   width: calc(100vw - 200px);
   max-width: 1240px;
-  top: 121px;
-  left: 100px;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 1199px) {
   .feedback__background {
-    top: 100px;
-    left: calc(100vw - 723px);
     width: 678px;
   }
 }
@@ -6769,12 +6783,7 @@ button,
 }
 
 .feedback__background img {
-  height: 803px;
-}
-@media (max-width: 1199px) {
-  .feedback__background img {
-    height: auto;
-  }
+  height: 100%;
 }
 
 .feedback__form {
@@ -6789,7 +6798,7 @@ button,
 }
 @media (max-width: 1199px) {
   .feedback__form {
-    padding: 60px 45px 12px;
+    padding: 60px 45px 58px;
     min-height: 780px;
     width: 442px;
   }
@@ -7313,6 +7322,7 @@ button,
   margin: 0;
   margin-left: 46px;
   padding: 0;
+  max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7328,6 +7338,7 @@ button,
   .footer__list {
     position: relative;
     margin-left: calc(100vw - 800px);
+    max-width: 540px;
     left: 4px;
     -webkit-column-gap: 5px;
        -moz-column-gap: 5px;
@@ -7377,9 +7388,12 @@ button,
   margin: 0;
   margin-left: auto;
   padding: 0;
+  max-width: 256px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style-type: none;
   gap: 10px 20px;
 }
@@ -7393,6 +7407,7 @@ button,
 @media (max-width: 767px) {
   .footer__social-list {
     margin-left: 0;
+    max-width: 134px;
   }
 }
 
