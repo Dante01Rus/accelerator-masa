@@ -7,7 +7,7 @@
   padding-bottom: 121px;
 
   @include vp-1199 {
-    padding-top: 11px;
+    padding-top: 59px;
     padding-bottom: 101px;
     overflow: hidden;
   }
@@ -58,7 +58,7 @@
   border-radius: 16px;
 
   @include vp-1199 {
-    padding-bottom: 46px;
+    padding: 50px 48px 46px 50px;
     max-width: 560px;
   }
 

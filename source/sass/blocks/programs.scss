@@ -49,7 +49,6 @@
 .programs__link {
   padding-left: 30px;
   width: 233px;
-  gap: 30px;
   background-color: $color-secondary-alabaster;
 
   @include vp-767 {
@@ -91,6 +90,14 @@
     .programs__icon-wrapper {
       background-color: $color-btn-disabled;
     }
+  }
+}
+
+.programs__link-text {
+  width: 64%;
+
+  @include vp-767 {
+    width: 63%;
   }
 }
 

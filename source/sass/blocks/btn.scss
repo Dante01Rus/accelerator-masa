@@ -5,7 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   border-radius: 30px;
+  user-select: none;
+  outline: none;
 
   color: $color-secondary-cerulean;
 

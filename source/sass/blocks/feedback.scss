@@ -1,11 +1,11 @@
 .feedback {
   background-color: $color-secondary-alabaster;
-  padding-bottom: 30px;
 }
 
 .feedback .container {
   position: relative;
   padding-top: 121px;
+  padding-bottom: 30px;
   border-radius: 16px;
   overflow: hidden;
 
@@ -35,6 +35,7 @@
 
   @include vp-1199 {
     width: 678px;
+    left: calc(100vw - 768px);
   }
 
   @include vp-767 {
@@ -59,7 +60,7 @@
   @include vp-1199 {
     padding: 60px 45px 58px;
     min-height: 780px;
-    width: 442px;
+    width: 65.2%;
   }
 
   @include vp-767 {
@@ -105,7 +106,7 @@
   row-gap: 16px;
 
   @include vp-1199 {
-    width: 352px;
+    width: 100%;
     row-gap: 14px;
   }
 
@@ -179,6 +180,7 @@
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
+  outline: none;
 }
 
 .feedback__form textarea {
@@ -196,6 +198,7 @@
   padding-bottom: 0;
 
   @include vp-1199 {
+    width: 100%;
     margin-top: -6px;
     margin-bottom: 6px;
   }
@@ -224,9 +227,10 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   min-height: 50px;
+  outline: none;
 
   @include vp-1199 {
-    width: 352px;
+    width: 100%;
   }
 
   @include vp-767 {
@@ -266,6 +270,7 @@
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+  outline: none;
 }
 
 .feedback__checkbox {
@@ -295,6 +300,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .feedback__checkbox-mark {
@@ -366,7 +372,6 @@
   color: $color-default-white;
   background-color: transparent;
   border: 1px solid $color-default-white;
-  gap: 30px;
 
   @include vp-767 {
     min-height: 42px;
@@ -401,7 +406,11 @@
   width: 240px;
   text-align: center;
 
+  @include vp-1199 {
+    width: 75%;
+  }
+
   @include vp-767 {
-    width: 162px;
+    width: 73%;
   }
 }

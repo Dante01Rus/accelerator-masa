@@ -33,6 +33,10 @@
     z-index: 1;
 
     cursor: pointer;
+
+    @include vp-767 {
+      top: -20px;
+    }
   }
 }
 
@@ -42,8 +46,8 @@
 }
 
 .header__menu-btn {
-  gap: 20px;
-  width: 134px;
+  min-width: 134px;
+  max-width: 286px;
   transition: all $trans-default;
   z-index: 2;
 
@@ -52,7 +56,6 @@
     color: $color-default-white;
     background-color: $color-secondary-cerulean;
     stroke: $color-secondary-cerulean;
-    outline: none;
   }
 
   &:hover .header__menu-icon,
@@ -70,7 +73,7 @@
   }
 
   &--opened {
-    width: 286px;
+    min-width: 286px;
     color: $color-default-white;
     background-color: $color-secondary-cerulean;
 
@@ -84,6 +87,7 @@
     @include vp-767 {
       position: absolute;
       right: 15px;
+      max-width: none;
       width: 290px;
     }
 
@@ -99,6 +103,9 @@
 }
 
 .header__menu-btn .header__menu-btn-text {
+  width: 40%;
+  max-width: 64%;
+
   @include vp-767 {
     font-size: 14px;
     line-height: 14px;
@@ -129,7 +136,7 @@
 
 .header__nav {
   position: absolute;
-  padding: 35px 25px;
+  padding: 32px 25px 35px;
   top: 58px;
   right: 100px;
   width: 286px;
@@ -143,6 +150,7 @@
   }
 
   @include vp-767 {
+    padding-bottom: 33px;
     right: 15px;
     width: 290px;
   }
@@ -160,7 +168,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 28px;
+  gap: 24px;
   max-height: none;
   font-size: 16px;
   line-height: 16px;
@@ -191,7 +199,12 @@
   text-transform: uppercase;
   border: none;
   background-color: transparent;
+  letter-spacing: 0.02rem;
   cursor: pointer;
+
+  svg {
+    margin-left: 8px;
+  }
 
   &:hover,
   &:focus-visible {
@@ -207,6 +220,7 @@
 .header__nav-link {
   display: block;
   color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.02rem;
 
   &:hover,
   &:focus-visible {
@@ -216,14 +230,18 @@
 }
 
 .header__nav-sublist {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-left: 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   list-style-type: none;
   text-transform: capitalize;
   min-height: 100px;
+
+  @include vp-767 {
+    padding-top: 17px;
+  }
 }
 
 

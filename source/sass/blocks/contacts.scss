@@ -91,6 +91,8 @@
 }
 
 .contacts__address {
+  display: flex;
+  flex-direction: column;
   width: 269px;
 }
 
@@ -108,6 +110,7 @@
   padding: 4px 0;
   color: inherit;
   cursor: pointer;
+  outline: none;
 
   &:hover,
   &:focus-visible {
@@ -134,10 +137,14 @@
 }
 
 .contacts__phone {
+  display: flex;
+  flex-direction: column;
   width: 132px;
 }
 
 .contacts__email {
+  display: flex;
+  flex-direction: column;
   width: 102px;
 }
 
