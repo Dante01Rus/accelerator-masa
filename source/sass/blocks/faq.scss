@@ -56,7 +56,6 @@
   background-color: $color-secondary-alabaster;
   border: 1px solid $color-secondary-cerulean;
   border-radius: 16px;
-  transition: background $trans-default;
 
   @include vp-767 {
     border-radius: 14px;

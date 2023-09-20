@@ -5266,7 +5266,7 @@ button,
 }
 @media (max-width: 1199px) {
   .news__swiper-slide {
-    padding-top: 198px;
+    padding-top: 127px;
     max-width: none;
     width: 324px;
     min-height: 350px;
@@ -5914,8 +5914,6 @@ button,
   background-color: #f0efe9;
   border: 1px solid #316dc2;
   border-radius: 16px;
-  -webkit-transition: background 0.3s ease-in;
-  transition: background 0.3s ease-in;
 }
 @media (max-width: 767px) {
   .faq__accordion-element {
