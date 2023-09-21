@@ -3020,6 +3020,23 @@ button,
 .modal__select-wrapper:focus-within input,
 .modal__select-wrapper:focus-within button {
   border-color: #484848;
+  outline: none;
+}
+
+.modal__name input:hover,
+.modal__name input:focus-visible,
+.modal__name button:hover,
+.modal__name button:focus-visible,
+.modal__phone input:hover,
+.modal__phone input:focus-visible,
+.modal__phone button:hover,
+.modal__phone button:focus-visible,
+.modal__select-wrapper input:hover,
+.modal__select-wrapper input:focus-visible,
+.modal__select-wrapper button:hover,
+.modal__select-wrapper button:focus-visible {
+  border: 1px solid #484848;
+  outline: none;
 }
 
 .modal__name:focus-visible,
@@ -3172,7 +3189,7 @@ button,
 .modal__checkbox input:focus-visible + .modal__checkbox-mark {
   background-color: #ffffff;
   background-image: url("../img/sprite.svg#checkbox");
-  border: 1px solid rgba(72, 72, 72, 0.3);
+  border: 1px solid #484848;
 }
 
 .modal__checkbox input:checked + .modal__checkbox-mark {
@@ -3397,11 +3414,9 @@ button,
   top: 58px;
   right: 100px;
   width: 286px;
-  max-height: calc(100vh - 100px);
   background-color: #316dc2;
   border-radius: 16px;
   z-index: 2;
-  overflow: auto;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -6925,6 +6940,8 @@ button,
   .header__nav {
     right: 15px;
     width: 290px;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
   }
 
   .header__nav-list-wrapper {
