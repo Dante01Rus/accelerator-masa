@@ -2557,16 +2557,6 @@ button,
   width: 300px;
   padding: 14px 0 28px;
   margin: 0 0 44px 0;
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
 }
 
 .custom-select__label {
@@ -7913,7 +7903,7 @@ button,
   }
 
   .custom-select {
-    padding: 4px 0 14px;
+    padding: 0;
     width: 100%;
   }
 
