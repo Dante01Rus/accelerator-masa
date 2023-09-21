@@ -136,27 +136,37 @@
 
 .header__nav {
   position: absolute;
-  padding: 32px 25px 35px;
   top: 58px;
   right: 100px;
   width: 286px;
+  max-height: 398px;
   background-color: $color-secondary-cerulean;
   border-radius: 16px;
-  transition: all 0.3s ease-out;
   z-index: 2;
+  transition: all 0.3s ease-out;
+  overflow: auto;
 
   @include vp-1199 {
     right: 45px;
   }
 
   @include vp-767 {
-    padding-bottom: 33px;
     right: 15px;
     width: 290px;
+    max-height: calc(100vh - 100px);
   }
 }
 
-.header__nav--closed {
+.header__nav-list-wrapper {
+  padding: 32px 25px 35px;
+  transition: all 0.3s ease-out;
+
+  @include vp-767 {
+    padding-bottom: 33px;
+  }
+}
+
+.header__nav--closed .header__nav-list-wrapper {
   padding: 0;
   height: 0;
   overflow: hidden;

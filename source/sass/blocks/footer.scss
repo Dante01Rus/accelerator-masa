@@ -168,6 +168,7 @@
   @include text-xsmall;
 
   position: relative;
+  outline: none;
 
   @include vp-1199 {
     @include text-xxsmall;

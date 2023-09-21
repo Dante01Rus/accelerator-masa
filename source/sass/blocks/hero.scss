@@ -61,20 +61,34 @@
 }
 
 .hero__slider-content {
+  display: none;
+}
+
+.hero__swiper-slide.swiper-slide-active .hero__slider-content {
+  display: block;
   position: relative;
-  padding: 370px 100px 60px;
+  padding: 419px 100px 60px;
   z-index: 2;
 
   @include vp-1199 {
     padding: 676px 45px 60px;
-
-    &--third {
-      padding-top: 663px;
-    }
   }
 
   @include vp-767 {
     padding: 200px 15px 20px;
+  }
+
+
+  &--third {
+    padding-top: 409px;
+
+    @include vp-1199 {
+      padding-top: 663px;
+    }
+
+    @include vp-767 {
+      padding-top: 232px;
+    }
   }
 }
 

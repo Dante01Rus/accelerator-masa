@@ -41,7 +41,7 @@
     padding: 60px 40px;
 
     @include vp-767 {
-      padding: 60px 16px;
+      padding: 24px 16px;
     }
   }
 
@@ -71,7 +71,7 @@
     }
 
     @include vp-767 {
-      padding: 35px 15px;
+      padding: 35px 15px 23px;
       width: 100%;
       min-height: 521px;
     }
@@ -243,6 +243,16 @@
     input,
     button {
       border-color: $color-main-charcoal;
+      outline: none;
+    }
+  }
+
+  input,
+  button {
+    &:hover,
+    &:focus-visible {
+      border: 1px solid $color-main-charcoal;
+      outline: none;
     }
   }
 
@@ -278,6 +288,7 @@
   background-color: transparent;
   border: 1px solid rgba($color-main-charcoal, 0.3);
   border-radius: 8px;
+  outline: none;
 
   @include vp-767 {
     min-height: 44px;
@@ -313,6 +324,7 @@
   border: 1px solid rgba($color-main-charcoal, 0.3);
   border-radius: 8px;
   min-height: 50px;
+  outline: none;
 
   @include vp-767 {
     padding: 4px;
@@ -360,6 +372,7 @@
 .modal__checkbox {
   padding: 0;
   margin-bottom: 13px;
+  user-select: none;
 
   @include vp-1199 {
     margin-bottom: 16px;
@@ -396,10 +409,18 @@
   background-color: $color-default-white;
   border: 1px solid rgba($color-main-charcoal, 0.3);
   border-radius: 2px;
+  outline: none;
 
   &:hover {
     border-color: $color-main-charcoal;
   }
+}
+
+.modal__checkbox input:hover + .modal__checkbox-mark,
+.modal__checkbox input:focus-visible + .modal__checkbox-mark {
+  background-color: $color-default-white;
+  background-image: url("../img/sprite.svg#checkbox");
+  border: 1px solid $color-main-charcoal;
 }
 
 .modal__checkbox input:checked + .modal__checkbox-mark {

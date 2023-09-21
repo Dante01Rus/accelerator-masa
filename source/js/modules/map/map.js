@@ -2,7 +2,6 @@ import leaflet from '../../vendor/leaflet';
 
 let map = document.querySelector('.contacts__map');
 
-
 if (map) {
   let map = L.map('map').setView([55.7753572, 37.6300319], 17);
   let masaIcon = L.icon({

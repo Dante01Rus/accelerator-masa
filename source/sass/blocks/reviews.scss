@@ -215,6 +215,7 @@
   stroke: $color-secondary-cerulean;
   cursor: pointer;
   border-radius: 50%;
+  outline: none;
 
   &:hover,
   &:focus-visible {

@@ -471,13 +471,14 @@
 .news__swiper-pagination {
   position: relative;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 50%;
   gap: 10px 20px;
 
   @include vp-767 {
     max-width: none;
-    width: 152px;
+    width: 60%;
     gap: 10px 16px;
   }
 }
@@ -490,6 +491,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  outline: none;
 
   @include vp-767 {
     width: 26px;

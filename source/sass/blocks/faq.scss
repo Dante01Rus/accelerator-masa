@@ -132,6 +132,25 @@
     }
   }
 
+  &:hover,
+  &.focus-visible {
+    background-color: $color-default-white;
+
+    &::after {
+      border: 1px solid $color-secondary-cerulean;
+      background: $color-default-white url("../img/sprite.svg#plus-hover") no-repeat center / 20px 20px;
+      stroke: $color-secondary-cerulean;
+    }
+  }
+
+  &:active {
+    color: $color-btn-active;
+
+    &::after {
+      background: $color-btn-active url("../img/sprite.svg#plus") no-repeat center / 20px 20px;
+    }
+  }
+
   &:disabled {
     &::after {
       background-color: $color-btn-disabled;
