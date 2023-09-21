@@ -3597,6 +3597,10 @@ button,
   z-index: 2;
 }
 
+.hero__slider-content--third {
+  padding-top: 409px;
+}
+
 .hero__swiper-pagination {
   position: absolute;
   top: 1px;
@@ -5385,6 +5389,10 @@ button,
   width: 132px;
 }
 
+.contacts__phone p {
+  margin-bottom: 12px;
+}
+
 .contacts__email {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5394,6 +5402,10 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   width: 102px;
+}
+
+.contacts__email p {
+  margin-bottom: 12px;
 }
 
 .contacts__map-wrapper {
@@ -6582,7 +6594,7 @@ button,
   }
 
   .contacts__info {
-    margin-bottom: 51px;
+    margin-bottom: 57px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -6593,7 +6605,7 @@ button,
   }
 
   .contacts__info::after {
-    bottom: -21px;
+    bottom: -27px;
   }
 
   .contacts h2 {
@@ -6610,6 +6622,10 @@ button,
     width: 100%;
   }
 
+  .contacts__details p {
+    margin-bottom: 18px;
+  }
+
   .contacts__address span {
     font-size: 16px;
     line-height: 20px;
@@ -6622,6 +6638,14 @@ button,
   .contacts__details a {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .contacts__phone p {
+    margin-bottom: 14px;
+  }
+
+  .contacts__email p {
+    margin-bottom: 14px;
   }
 
   .contacts__map-wrapper {
@@ -6962,6 +6986,10 @@ button,
 
   .hero__slider-content {
     padding: 200px 15px 20px;
+  }
+
+  .hero__slider-content--third {
+    padding-top: 232px;
   }
 
   .hero__swiper-pagination {
@@ -7617,11 +7645,11 @@ button,
   }
 
   .contacts__info {
-    margin-bottom: 48px;
+    margin-bottom: 51px;
   }
 
   .contacts__info::after {
-    bottom: -18px;
+    bottom: -21px;
   }
 
   .contacts h2 {
@@ -7637,7 +7665,7 @@ button,
   }
 
   .contacts__details p {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
   }
 
   .contacts__address span {
@@ -7648,6 +7676,14 @@ button,
   .contacts__details a {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .contacts__phone p {
+    margin-bottom: 5px;
+  }
+
+  .contacts__email p {
+    margin-bottom: 3px;
   }
 
   .contacts__map-wrapper {
@@ -7755,7 +7791,7 @@ button,
   }
 
   .feedback__btn span {
-    width: 73%;
+    width: 71%;
   }
 
   .footer .container {
