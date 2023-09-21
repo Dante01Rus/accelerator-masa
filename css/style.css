@@ -6829,11 +6829,11 @@ button,
   }
 
   .modal__wrapper {
-    padding: 60px 16px;
+    padding: 24px 16px;
   }
 
   .modal__content {
-    padding: 35px 15px;
+    padding: 35px 15px 23px;
     width: 100%;
     min-height: 521px;
   }
@@ -7759,11 +7759,11 @@ button,
 
   .feedback__select-wrapper {
     margin-bottom: 0;
+    padding: 0;
   }
 
   .feedback__select-wrapper > span {
     margin-bottom: 12px;
-    padding: 0;
   }
 
   .feedback__select-btn {
