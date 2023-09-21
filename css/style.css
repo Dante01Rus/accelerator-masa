@@ -3065,6 +3065,7 @@ button,
   background-color: transparent;
   border: 1px solid rgba(72, 72, 72, 0.3);
   border-radius: 8px;
+  outline: none;
 }
 
 .modal__select-wrapper {
@@ -3084,6 +3085,7 @@ button,
   border: 1px solid rgba(72, 72, 72, 0.3);
   border-radius: 8px;
   min-height: 50px;
+  outline: none;
 }
 
 .modal__select-btn span {
@@ -3159,10 +3161,18 @@ button,
   background-color: #ffffff;
   border: 1px solid rgba(72, 72, 72, 0.3);
   border-radius: 2px;
+  outline: none;
 }
 
 .modal__checkbox-mark:hover {
   border-color: #484848;
+}
+
+.modal__checkbox input:hover + .modal__checkbox-mark,
+.modal__checkbox input:focus-visible + .modal__checkbox-mark {
+  background-color: #ffffff;
+  background-image: url("../img/sprite.svg#checkbox");
+  border: 1px solid rgba(72, 72, 72, 0.3);
 }
 
 .modal__checkbox input:checked + .modal__checkbox-mark {
@@ -5681,6 +5691,12 @@ button,
 
 .feedback__checkbox input:checked + .feedback__checkbox-mark {
   background: #ffffff url("../img/sprite.svg#checkbox") no-repeat center/14px 8px;
+}
+
+.feedback__checkbox input:checked + .feedback__checkbox-mark:hover,
+.feedback__checkbox input:checked + .feedback__checkbox-mark:focus-visible {
+  background-color: #316dc2;
+  background-image: url("../img/sprite.svg#checkbox-white");
 }
 
 .feedback__checkbox input:checked:disabled + .feedback__checkbox-mark {
