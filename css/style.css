@@ -3414,11 +3414,13 @@ button,
   top: 58px;
   right: 100px;
   width: 286px;
+  max-height: 398px;
   background-color: #316dc2;
   border-radius: 16px;
   z-index: 2;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  overflow: auto;
 }
 
 .header__nav-list-wrapper {
@@ -6970,7 +6972,6 @@ button,
     right: 15px;
     width: 290px;
     max-height: calc(100vh - 100px);
-    overflow: auto;
   }
 
   .header__nav-list-wrapper {
