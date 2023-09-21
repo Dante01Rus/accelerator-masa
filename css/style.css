@@ -3380,25 +3380,24 @@ button,
 
 .header__nav {
   position: absolute;
-  padding: 32px 25px 35px;
   top: 58px;
   right: 100px;
   width: 286px;
   background-color: #316dc2;
   border-radius: 16px;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
   z-index: 2;
 }
 
-.header__nav--closed {
+.header__nav-list-wrapper {
+  padding: 32px 25px 35px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.header__nav--closed .header__nav-list-wrapper {
   padding: 0;
   height: 0;
   overflow: hidden;
-}
-
-.header__nav--closed .header__nav-list {
-  display: none;
 }
 
 .header__nav-list {
@@ -6872,9 +6871,12 @@ button,
   }
 
   .header__nav {
-    padding-bottom: 33px;
     right: 15px;
     width: 290px;
+  }
+
+  .header__nav-list-wrapper {
+    padding-bottom: 33px;
   }
 
   .header__nav-sublist {
