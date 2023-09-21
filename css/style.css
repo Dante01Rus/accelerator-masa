@@ -3397,6 +3397,10 @@ button,
   overflow: hidden;
 }
 
+.header__nav--closed .header__nav-list {
+  display: none;
+}
+
 .header__nav-list {
   margin: 0;
   padding: 0;
