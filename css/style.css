@@ -3600,7 +3600,7 @@ button,
 .hero__swiper-slide.swiper-slide-active .hero__slider-content {
   display: block;
   position: relative;
-  padding: 370px 100px 60px;
+  padding: 419px 100px 60px;
   z-index: 2;
 }
 
@@ -7763,6 +7763,7 @@ button,
 
   .feedback__select-wrapper > span {
     margin-bottom: 12px;
+    padding: 0;
   }
 
   .feedback__select-btn {
