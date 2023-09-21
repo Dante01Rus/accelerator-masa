@@ -3126,6 +3126,10 @@ button,
 .modal__checkbox {
   padding: 0;
   margin-bottom: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .modal__checkbox .modal__checkbox-text {
@@ -3380,24 +3384,22 @@ button,
 
 .header__nav {
   position: absolute;
+  padding: 32px 25px 35px;
   top: 58px;
   right: 100px;
   width: 286px;
+  max-height: calc(100vh - 100px);
   background-color: #316dc2;
   border-radius: 16px;
-  z-index: 2;
-}
-
-.header__nav-list-wrapper {
-  padding: 32px 25px 35px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  z-index: 2;
+  overflow: auto;
 }
 
-.header__nav--closed .header__nav-list-wrapper {
+.header__nav--closed {
   padding: 0;
   height: 0;
-  overflow: hidden;
 }
 
 .header__nav-list {
@@ -4791,6 +4793,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 50%;
@@ -6871,12 +6876,9 @@ button,
   }
 
   .header__nav {
+    padding-bottom: 33px;
     right: 15px;
     width: 290px;
-  }
-
-  .header__nav-list-wrapper {
-    padding-bottom: 33px;
   }
 
   .header__nav-sublist {
@@ -7383,7 +7385,7 @@ button,
 
   .news__swiper-pagination {
     max-width: none;
-    width: 152px;
+    width: 60%;
     gap: 10px 16px;
   }
 
