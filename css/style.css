@@ -5907,6 +5907,7 @@ button,
   line-height: 18px;
   font-weight: 400;
   position: relative;
+  outline: none;
 }
 
 .footer__privacy::after {
