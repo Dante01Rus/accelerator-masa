@@ -3384,22 +3384,28 @@ button,
 
 .header__nav {
   position: absolute;
-  padding: 32px 25px 35px;
   top: 58px;
   right: 100px;
   width: 286px;
   max-height: calc(100vh - 100px);
   background-color: #316dc2;
   border-radius: 16px;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
   z-index: 2;
   overflow: auto;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-.header__nav--closed {
+.header__nav-list-wrapper {
+  padding: 32px 25px 35px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.header__nav--closed .header__nav-list-wrapper {
   padding: 0;
   height: 0;
+  overflow: hidden;
 }
 
 .header__nav-list {
@@ -4254,6 +4260,7 @@ button,
   stroke: #316dc2;
   cursor: pointer;
   border-radius: 50%;
+  outline: none;
 }
 
 .programs__swiper-button:hover,
@@ -4810,6 +4817,7 @@ button,
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  outline: none;
 }
 
 .news__swiper-pagination-btn:not(.news__swiper-pagination-btn--active):hover,
@@ -4971,6 +4979,26 @@ button,
   background: #316dc2 url("../img/sprite.svg#plus") no-repeat center/20px 20px;
   -webkit-transition: background 0.3s ease-in;
   transition: background 0.3s ease-in;
+}
+
+.faq__accordion-button:hover,
+.faq__accordion-button.focus-visible {
+  background-color: #ffffff;
+}
+
+.faq__accordion-button:hover::after,
+.faq__accordion-button.focus-visible::after {
+  border: 1px solid #316dc2;
+  background: #ffffff url("../img/sprite.svg#plus-hover") no-repeat center/20px 20px;
+  stroke: #316dc2;
+}
+
+.faq__accordion-button:active {
+  color: #275699;
+}
+
+.faq__accordion-button:active::after {
+  background: #275699 url("../img/sprite.svg#plus") no-repeat center/20px 20px;
 }
 
 .faq__accordion-button:disabled::after {
@@ -5181,6 +5209,7 @@ button,
   stroke: #316dc2;
   cursor: pointer;
   border-radius: 50%;
+  outline: none;
 }
 
 .reviews__swiper-button:hover,
@@ -5637,20 +5666,21 @@ button,
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 2px;
+  outline: none;
 }
 
 .feedback__checkbox-mark:hover {
   border-color: #ffffff;
 }
 
-.feedback__checkbox input:checked + .feedback__checkbox-mark {
-  background: #ffffff url("../img/sprite.svg#checkbox") no-repeat center/14px 8px;
-}
-
-.feedback__checkbox input:checked + .feedback__checkbox-mark:hover,
-.feedback__checkbox input:checked + .feedback__checkbox-mark:focus-visible {
+.feedback__checkbox input:hover + .feedback__checkbox-mark,
+.feedback__checkbox input:focus-visible + .feedback__checkbox-mark {
   background-color: #316dc2;
   background-image: url("../img/sprite.svg#checkbox-white");
+}
+
+.feedback__checkbox input:checked + .feedback__checkbox-mark {
+  background: #ffffff url("../img/sprite.svg#checkbox") no-repeat center/14px 8px;
 }
 
 .feedback__checkbox input:checked:disabled + .feedback__checkbox-mark {
@@ -6876,9 +6906,12 @@ button,
   }
 
   .header__nav {
-    padding-bottom: 33px;
     right: 15px;
     width: 290px;
+  }
+
+  .header__nav-list-wrapper {
+    padding-bottom: 33px;
   }
 
   .header__nav-sublist {
