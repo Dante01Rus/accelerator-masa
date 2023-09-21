@@ -154,12 +154,12 @@
     right: 15px;
     width: 290px;
   }
+}
 
-  &--closed {
-    padding: 0;
-    height: 0;
-    overflow: hidden;
-  }
+.header__nav--closed {
+  padding: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .header__nav-list {
