@@ -3423,6 +3423,7 @@ button,
   padding: 0;
   height: 0;
   overflow: hidden;
+  visibility: hidden;
 }
 
 .header__nav-list {
